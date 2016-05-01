@@ -1,0 +1,228 @@
+/*
+Theme Name: Child of Twenty Thirteen
+Author: Cindy DeLano
+Description: This is a theme for a fall farmers market site
+Version: 1.0
+Template: twentythirteen
+*/
+
+/*@import url("../twentythirteen/style.css");
+*/
+body {
+
+	background-color: #ffffff;
+	color: #330000;
+}
+
+a:visited {
+	color: #e8ded6; 
+}
+
+.spacer {
+	background-color: #fff;
+	min-width: 1080px;
+	min-height: 20px;
+}
+
+
+
+.site-header .site-title:hover {
+	text-decoration: none;
+}
+
+.site-header {
+	position: relative;
+}
+
+.site-header .home-link {
+	color: #141412; /* is this color active? */
+	display: block;
+	margin: 0 auto;
+	max-width: 1080px;
+	min-height: 380px;
+	padding: 0 20px;
+	text-decoration: none;
+	width: 100%;
+}
+
+
+.site-title {
+	color: #fff;
+	text-shadow: 2px 2px black;
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 100px;
+}
+
+.site-description {
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+	text-transform: uppercase;
+}
+
+.navbar {
+    background-color: #ff9933;
+}
+
+.nav-menu li a {
+/*	color: #fff;
+*/    font-size: 22px;
+    margin-right: 50px;
+ }
+
+ .main-navigation {
+	clear: both;
+	margin: 0 auto;
+	max-width: 960px;
+	min-height: 45px;
+	position: relative;
+}
+
+ul.nav-menu,
+div.nav-menu > ul {
+	margin: 0;
+	padding: 0 40px 0 0;
+}
+
+.nav-menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	background-color: #ff9933;
+	color: #fff;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background: #fff;
+	color: #ff9933;
+}/* This appear to be hapening after a link has been clicked on */
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background-color: #ff9933; /* background color of submenu */
+	color: #ff9933; /* this doesn't make any sense! orange on orange? */
+	border: 2px solid #f7f5e7;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	left: -2px;
+	z-index: 99999;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+	border-left: 0;
+	left: 100%;
+	top: 0;
+}
+
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+	color: #fff;
+	margin: 0;
+	width: 200px;
+}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover,
+ul.nav-menu ul a:focus,
+.nav-menu ul ul a:focus {
+	background-color: #ff9933;  
+}
+
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+/*	color: #bc360a;
+	font-style: italic;  style and color for once a link has been clicked on Cindy: color okay with me;
+} */
+}
+
+/* style that creates the width of main content on each page */
+
+.site-content {
+	max-width: 840px;
+	margin: auto;
+}
+/*.page-title {
+	background-color: pink;
+	min-height: 26px;
+	min-width: 1080px;
+
+}*/
+
+/*
+ * 5.0 Content (copied from parent theme)
+ * ----------------------------------------------------------------------------
+ */
+
+.hentry {
+	padding: 40px 0;
+}
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+	margin: 0 auto;
+	max-width: 604px;
+	width: 100%;
+}
+
+.sidebar .entry-header,
+.sidebar .entry-content,
+.sidebar .entry-summary,
+.sidebar .entry-meta {
+	max-width: 960px;
+	padding: 0 376px 0 60px;
+}
+
+
+
+/* footer styles  */
+
+.site-footer .widget-area {
+	max-width: 960px;
+	margin: auto;
+}
+
+.site-footer .sidebar-container {
+    background-color: #ff9933;
+    padding: 20px 0;
+}
+
+.site-info {
+	background-color: #ff9933
+}
+
+ .widget .widget-title {
+	font-style: normal;
+	font-weight: 400;
+}
