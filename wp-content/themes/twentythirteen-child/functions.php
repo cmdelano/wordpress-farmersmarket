@@ -20,8 +20,8 @@ function theme_enqueue_styles() {
 * This theme uses a custom image size for featured images, displayed on
 * "standard" posts and pages.
 */
-    add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 604, 270, true );
+    // add_theme_support( 'post-thumbnails' );
+   // set_post_thumbnail_size( 604, 270, true );
 
 function create_custom_post_types() {
 
@@ -35,6 +35,7 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'our-vendors' ),
+            'taxonomies' => array ( 'post_tag', 'category'),
         )
     );
 

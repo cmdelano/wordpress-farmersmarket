@@ -27,7 +27,9 @@ get_header(); ?>
 				$artist_month = get_field('artist_month');
 				$artist_date = get_field('artist_date');
 				$artist_year = get_field('artist_year');
-				$artist_time = get_field('artist_time'); ?>
+				$artist_time = get_field('artist_time'); 
+				$artist_website = get_field('artist_website'); 
+				$categry = get_field('category'); ?>
 
 				<div class="artist-photo">
 					<?php if ($artist_photo) { ?>
@@ -43,6 +45,9 @@ get_header(); ?>
 							<li><?php echo $artist_date ?>, </li>
 							<li><?php echo $artist_year ?></li>
 							<li> @ <?php echo $artist_time ?></li>
+							<li><?php if ($artist_website) { ?>
+								<?php echo ($artist_website ); ?>
+					<?php } ?>
 						</h4>
 					</ul>
 					<p class="artist-description">
@@ -53,6 +58,8 @@ get_header(); ?>
 				<?php twentythirteen_post_nav(); ?>
 
 			<?php endwhile; ?>
+
+				<h2><?php echo get_cat_name(5) ?></h2>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

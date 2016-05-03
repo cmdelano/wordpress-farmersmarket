@@ -46,12 +46,14 @@ get_header(); ?>
 							<li><?php echo $vendor_street_address ?></li>
 							<li><?php echo $vendor_city ?>, </li>
 							<li><?php echo $vendor_state ?></li>
-							<li><?php echo $vendor_state ?></li>
+							<li><?php echo $vendor_zipcode ?></li>
 							<li><?php echo $vendor_website ?></li>
-
 						</h4>
 					</ul>
 				</section>
+
+				<?php twentythirteen_post_nav(); ?>
+
 
 			<?php endwhile; ?>
 
