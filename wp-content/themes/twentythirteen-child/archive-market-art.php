@@ -1,38 +1,33 @@
 <?php
 /**
- * The template for displaying Archive pages
+ * The template the displaying the Market Art archives pages
  *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
  *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Thirteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
+ * This template pulls in several fields from the Advanced Custom Fields plugin.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Twenty_Thirteen__Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div class="spacer"></div><!--take this out once you have this template styled -->
-
-		<div id="page-title" class="page-title">
-			<h2>Market Art</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/market-art/">
+				<h2>Market Art</h2>
+			</a>		
 		</div>
 
+		<div id="content" class="site-content" role="main">
+		
 		<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
 
 
-				$size = "medium";
+				$size = "medium"; //variables
 				$artist_photo = get_field('artist_photo');
 				$artist_month = get_field('artist_month');
 				$artist_date = get_field('artist_date');
@@ -40,7 +35,7 @@ get_header(); ?>
 				$artist_time = get_field('artist_time'); 
 				$artist_website = get_field('artist_website'); 
 
-				$categry = get_field('category');
+				// $category = get_field('category');
 				?>
 
 
@@ -58,9 +53,6 @@ get_header(); ?>
 							<li><?php echo $artist_date ?>, </li>
 							<li><?php echo $artist_year ?></li>
 							<li> @ <?php echo $artist_time ?></li>
-							<li><?php if ($artist_website) { ?>
-								<?php echo ($artist_website ); ?>
-					<?php } ?>
 						</h4>
 					</ul>
 					<p class="artist-description">
@@ -68,13 +60,12 @@ get_header(); ?>
 					</p>
 				</section>
 
-			<?php endwhile; ?>
+				<div class="clearfix"></div>
 
-			<h2><?php echo get_cat_name(5) ?></h2>
+			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
 			
-
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

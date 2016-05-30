@@ -11,12 +11,14 @@ get_header(); ?>
 
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div id="page-title" class="page-title">
-			<h2>Market Kids</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/market-kids/">
+				<h2>Market Kids</h2>
+				</a>		
 		</div>
 
+		<div id="content" class="site-content" role="main">
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
@@ -37,7 +39,7 @@ get_header(); ?>
 
 				<section class="artist-info">
 					<h3>Market Art: <?php the_title(); ?></h3>
-					<ul class="event_date">
+					<ul class="event-date">
 						<h4>
 							<li><?php echo $kids_month ?></li>
 							<li><?php echo $kids_date ?>, </li>
@@ -49,6 +51,9 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</p>
 				</section>
+
+				<div class="clearfix"></div>s
+
 
 				<?php twentythirteen_post_nav(); ?>
 

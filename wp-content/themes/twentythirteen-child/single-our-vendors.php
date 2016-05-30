@@ -21,36 +21,47 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div id="page-title" class="page-title">
-			<h2>Our Vendors</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/our-vendors/">
+				<h2>Our Vendors</h2>
+			</a>
 		</div>
+
+		<div id="content" class="site-content" role="main">
 
 		<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
 
-
+				$size = 'medium';
+				$vendor_photo = get_field( 'vendor_photo'); 
 				$vendor_street_address = get_field('vendor_street_address');
 				$vendor_city = get_field('vendor_city');
 				$vendor_state = get_field('vendor_state');
 				$vendor_zipcode = get_field('vendor_zipcode');
 				$vendor_website = get_field('vendor_website'); ?>
+				
 
 
 
 				<section class="vendor-title">
-					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-					<ul class="vendor-info">
-						<h4>
-							<li><?php echo $vendor_street_address ?></li>
-							<li><?php echo $vendor_city ?>, </li>
-							<li><?php echo $vendor_state ?></li>
-							<li><?php echo $vendor_zipcode ?></li>
-							<li><?php echo $vendor_website ?></li>
-						</h4>
-					</ul>
+					<h3><?php the_title(); ?></h3>
+					<div class="vendor-info">
+							<p><?php echo $vendor_street_address ?>, 
+							<?php echo $vendor_city ?>, 
+							<?php echo $vendor_state ?>
+							<?php echo $vendor_zipcode ?></p>
+							<p><?php echo $vendor_website ?></p>
+							<p><?php the_content(); ?>
 				</section>
+
+				<div class="vendor-photo">
+					<?php if ($vendor_photo) { ?>
+					<?php echo wp_get_attachment_image( $vendor_photo, $size ); ?>	
+					<?php } ?>
+				</div>
+
+				<div class="clearfix"></div>
 
 				<?php twentythirteen_post_nav(); ?>
 

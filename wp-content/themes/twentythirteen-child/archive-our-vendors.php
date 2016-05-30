@@ -21,11 +21,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div id="page-title" class="page-title">
-			<h2>Our Vendors</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/our-vendors/">
+				<h2>Our Vendors</h2>
+			</a>
 		</div>
+
+		<div id="content" class="site-content" role="main">
 
 		<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
@@ -38,19 +41,8 @@ get_header(); ?>
 				$vendor_website = get_field('vendor_website'); ?>
 
 
-
 				<section class="vendor-title">
 					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-					<ul class="vendor-info">
-						<h4>
-							<li><?php echo $vendor_street_address ?></li>
-							<li><?php echo $vendor_city ?>, </li>
-							<li><?php echo $vendor_state ?></li>
-							<li><?php echo $vendor_zipcode ?></li>
-							<li><?php echo $vendor_website ?></li>
-
-						</h4>
-					</ul>
 				</section>
 
 			<?php endwhile; ?>

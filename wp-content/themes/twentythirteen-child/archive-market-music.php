@@ -1,32 +1,27 @@
 <?php
 /**
- * The template for displaying Archive pages
+ * The template the displaying the Market Music archives pages
  *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
  *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Thirteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
+ * This template pulls in several fields from the Advanced Custom Fields plugin.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Twenty_Thirteen__Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div class="spacer"></div><!--take this out once you have this template styled -->
-
-		<div id="page-title" class="page-title">
-			<h2>Market Music</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/market-music/">
+				<h2>Market Music</h2>
+			</a>
 		</div>
+
+		<div id="content" class="site-content" role="main">
 
 		<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
@@ -57,16 +52,16 @@ get_header(); ?>
 						</h4>
 					</ul>
 					<p class="artist-description">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
 					</p>
 				</section>
 
-			<?php endwhile; ?>
+				<div class="clearfix"></div>
+
+				<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
 			
-
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

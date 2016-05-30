@@ -14,8 +14,16 @@ body {
 	color: #330000;
 }
 
+h2 {
+	font-size: 24px;
+}
+
 a:visited {
 	color: #e8ded6; 
+}
+
+.clearfix {
+	clear: both;
 }
 
 .spacer {
@@ -23,7 +31,6 @@ a:visited {
 	min-width: 1080px;
 	min-height: 20px;
 }
-
 
 
 .site-header .site-title:hover {
@@ -71,8 +78,7 @@ a:visited {
 }
 
 .nav-menu li a {
-/*	color: #fff;
-*/    font-size: 22px;
+	font-size: 22px;
     margin-right: 50px;
  }
 
@@ -165,46 +171,95 @@ ul.nav-menu .focus > ul,
 } */
 }
 
-/* style that creates the width of main content on each page */
+/* Styles for the Front Page */
+
+.full-width {
+	width: 1200px;
+	margin: auto;
+	padding: 10px;
+}
+
+.upcoming-events {
+	margin-right: 30px;
+}
+
+.upcoming-events li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.events {
+	padding: 30px;
+}
+
+.event-info h3 {
+	font-size: 22px;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 600;
+}
+
+.event-date h4 {
+	color: #ff9933;
+	font-size: 18px;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 600;
+}
+
+/* Styles that creates the width of main content on each interior page */
 
 .site-content {
-	max-width: 840px;
+	max-width: 940px;
 	margin: auto;
-}
-/*.page-title {
-	background-color: pink;
-	min-height: 26px;
-	min-width: 1080px;
-
-}*/
-
-/*
- * 5.0 Content (copied from parent theme)
- * ----------------------------------------------------------------------------
- */
-
-.hentry {
-	padding: 40px 0;
+	padding: 10px;
 }
 
-.entry-header,
-.entry-content,
-.entry-summary,
-.entry-meta {
-	margin: 0 auto;
-	max-width: 604px;
-	width: 100%;
-}
-
-.sidebar .entry-header,
-.sidebar .entry-content,
-.sidebar .entry-summary,
-.sidebar .entry-meta {
-	max-width: 960px;
-	padding: 0 376px 0 60px;
+.title-of-page {
+	text-align: center;
+	background-color: orange;
+	min-width: 100%;
+	font-style: normal;
+	padding: 10px 0 10px 0;
 }
 
 
+ul.event-date {
+	padding: 0;
+}
+
+ul.event-date li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+
+
+/* Styles for the single artist/musician/kids pages */
+
+.artist-photo {
+	float: left;
+	width: 30%;
+}
+
+.artist-info {
+	float: right;
+	width: 60%;
+}
+
+
+/* styles for the single vendor pages */
+
+.vendor-title {
+	/* any needed styles to come */
+}
+
+.vendor-info {
+	float: left;
+	width: 60%;
+}
+
+.vendor-photo {
+	float: right;
+}
 
 /* footer styles  */
 
@@ -212,6 +267,8 @@ ul.nav-menu .focus > ul,
 	max-width: 960px;
 	margin: auto;
 }
+
+
 
 .site-footer .sidebar-container {
     background-color: #ff9933;

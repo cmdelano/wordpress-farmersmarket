@@ -1,38 +1,33 @@
 <?php
 /**
- * The template for displaying Archive pages
+ * The template the displaying the Market Kids archives pages
  *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
  *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Thirteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
+ * This template pulls in several fields from the Advanced Custom Fields plugin.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Twenty_Thirteen__Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		<div class="spacer"></div><!--take this out once you have this template styled -->
-
-		<div id="page-title" class="page-title">
-			<h2>Market Kids</h2>
+		<div class="title-of-page">
+			<a href="<?php echo home_url(); ?>/market-kids/">
+				<h2>Market Kids</h2>
+			</a>
 		</div>
+
+		<div id="content" class="site-content" role="main">
 
 		<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); 
 
 
-				$size = 'medium';
+				$size = 'medium'; //variables
 				$kids_photo = get_field('kids_photo');
 				$kids_month = get_field('kids_month');
 				$kids_date = get_field('kids_date');
@@ -47,7 +42,7 @@ get_header(); ?>
 
 				<section class="artist-info">
 					<a href="<?php the_permalink(); ?>"><h3>Market Kids: <?php the_title(); ?></h3></a>
-					<ul class="event_date">
+					<ul class="event-date">
 						<h4>
 							<li><?php echo $kids_month ?></li>
 							<li><?php echo $kids_date ?>, </li>
@@ -56,17 +51,16 @@ get_header(); ?>
 						</h4>
 					</ul>
 					<p class="artist-description">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
 					</p>
 				</section>
 
+				<div class="clearfix"></div>
 
 			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
 			
-
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

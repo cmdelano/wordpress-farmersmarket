@@ -35,7 +35,7 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'our-vendors' ),
-            'taxonomies' => array ( 'post_tag', 'category'),
+            'taxonomies' => array ( 'post_tag', 'category')
         )
     );
 
@@ -50,8 +50,11 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'market-music' ),
+            'taxonomies' => array ( 'post_tag', 'category' )
         )
     );
+
+register_taxonomy_for_object_type( 'category', 'post','market-music' );
 
 
 // creating the Market Art post type
@@ -64,6 +67,7 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'market-art' ),
+            'taxonomies' => array ( 'post_tag', 'category')
         )
     );
 
@@ -77,9 +81,34 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'market-kids' ),
+            'taxonomies' => array ( 'post_tag', 'category')
         )
     );
 }
 
 // Hooks the custom function up to the theme
 add_action( 'init', 'create_custom_post_types' );
+
+
+// Filter the except length to 20 words.
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+// Function to add custom post types to wordpress default categories and tags
+
+function add_custom_types_to_tax( $query ) {
+if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+
+// Get all your post types
+$post_types = get_post_types();
+
+$query->set( 'post_type', $post_types );
+return $query;
+}
+}
+add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
