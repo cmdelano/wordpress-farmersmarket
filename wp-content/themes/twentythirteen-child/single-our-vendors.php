@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 			<a href="<?php echo home_url(); ?>/our-vendors/">
-				<h2>Our Vendors</h2>
+				<h2>&mdash; Our Vendors &mdash;</h2>
 			</a>
 		</div>
 
@@ -39,10 +39,9 @@ get_header(); ?>
 				$vendor_city = get_field('vendor_city');
 				$vendor_state = get_field('vendor_state');
 				$vendor_zipcode = get_field('vendor_zipcode');
+				$vendor_phone = get_field('vendor_phone');
 				$vendor_website = get_field('vendor_website'); ?>
 				
-
-
 
 				<section class="vendor-title">
 					<h3><?php the_title(); ?></h3>
@@ -51,8 +50,10 @@ get_header(); ?>
 							<?php echo $vendor_city ?>, 
 							<?php echo $vendor_state ?>
 							<?php echo $vendor_zipcode ?></p>
+							<p><?php echo $vendor_phone ?></p>
 							<p><?php echo $vendor_website ?></p>
-							<p><?php the_content(); ?>
+							<p><?php the_content(); ?></p>
+					</div>
 				</section>
 
 				<div class="vendor-photo">

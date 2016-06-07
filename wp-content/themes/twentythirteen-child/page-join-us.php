@@ -24,40 +24,50 @@ get_header(); ?>
 		</div><!-- .title-of-page -->
 
 		<div id="content" class="site-content" role="main">
+	
+					 
+					<?php while ( have_posts() ) : the_post(); 
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio asperiores nesciunt reprehenderit modi quam voluptas itaque error quas animi inventore repellendus esse, ducimus rerum illum ex accusantium fuga explicabo consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus non commodi perferendis modi, voluptas cum necessitatibus, amet cupiditate quo aperiam. Obcaecati, consequatur? Repellat sequi alias neque saepe molestiae repellendus repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore animi blanditiis aut, vel libero? Ut enim repellat iste reprehenderit at, sapiente tenetur dignissimos, ex quas doloremque harum totam, officia blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quidem sed soluta? Sapiente beatae voluptates quisquam porro, recusandae, modi doloribus ipsum neque eum explicabo cupiditate culpa provident eveniet libero. 
-		</p>
+					$join_us_intro=get_field('join_us_intro_text');
+					$vendor_invitation_text=get_field('vendor_invitation_text');
+					$musician_invitation_text=get_field('musician_invitation_text');
+					$artist_invitation_text=get_field('artist_invitation_text');
+					$kids_invitation_text=get_field('kids_invitation_text');
 
-		<div id="vendor-invite">
-			<h2>Vendors</h2>
-		</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam fugit numquam alias suscipit vero animi quis impedit est ut officiis eveniet odio adipisci illo dolore iste quos incidunt, consectetur possimus.</p>
+					?>
+
+			<section class="join-us-page">
+				<p><?php echo $join_us_intro; ?></p>
+
+				<div id="vendor-invite">
+					<h2>Vendors</h2>
+				</div>
+								
+					<p><?php echo $vendor_invitation_text; ?></p>
+
+				<div id="musician-invite">
+					<h2>Musicians</h2>
+				</div>
 				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio asperiores nesciunt reprehenderit modi quam voluptas itaque error quas animi inventore repellendus esse, ducimus rerum illum ex accusantium fuga explicabo consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus non commodi perferendis modi, voluptas cum necessitatibus, amet cupiditate quo aperiam. Obcaecati, consequatur? Repellat sequi alias neque saepe molestiae repellendus repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore animi blanditiis aut, vel libero? Ut enim repellat iste reprehenderit at, sapiente tenetur dignissimos, ex quas doloremque harum totam, officia blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quidem sed soluta? Sapiente beatae voluptates quisquam porro, recusandae, modi doloribus ipsum neque eum explicabo cupiditate culpa provident eveniet libero. 
-				</p>
+					<p><?php echo $musician_invitation_text; ?></p>
 
-		<div id="musician-invite">
-		</div>
-			<h2>Musicians</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nihil corporis rem dicta voluptatum temporibus necessitatibus autem nesciunt esse cumque. Laborum repellendus, officiis molestias natus, debitis expedita at id fugiat.</p>
-		
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio asperiores nesciunt reprehenderit modi quam voluptas itaque error quas animi inventore repellendus esse, ducimus rerum illum ex accusantium fuga explicabo consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus non commodi perferendis modi, voluptas cum necessitatibus, amet cupiditate quo aperiam. Obcaecati, consequatur? Repellat sequi alias neque saepe molestiae repellendus repudiandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore animi blanditiis aut, vel libero? Ut enim repellat iste reprehenderit at, sapiente tenetur dignissimos, ex quas doloremque harum totam, officia blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quidem sed soluta? Sapiente beatae voluptates quisquam porro, recusandae, modi doloribus ipsum neque eum explicabo cupiditate culpa provident eveniet libero. 
-				</p>
+				<div id="artist-invite">
+					<h2>Artists</h2>
+				</div>
 
-		<div id="artist-invite">
-		</div>
-			<h2>Artists</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eos, dignissimos impedit, ipsam est deleniti alias ullam suscipit animi eius aspernatur, eum rerum inventore beatae sunt iure eaque iste. Perferendis!</p>
-		
+					<p><?php echo $artist_invitation_text; ?></p>
 
-		<div id="kids-invite">
-		</div>
-			<h2>Kids Events</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestias fugiat nam cum consectetur saepe quas aperiam, accusantium recusandae dolores cupiditate consequuntur deleniti perspiciatis illo earum provident fuga qui tempore!</p>
-		
-
+				<div id="kids-invite">
+					<h2>Kids Events</h2>
+				</div>
 			
+					<p><?php echo $kids_invitation_text; ?></p>
 
+				<?php endwhile; ?>
+			</section>
+
+			<?php echo do_shortcode('[ninja_forms id=1]'); ?>	
+		
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

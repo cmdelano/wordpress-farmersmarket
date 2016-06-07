@@ -2,6 +2,8 @@
 /**
  * The template for displaying the About Us page
  *
+ * Fields all pulled from the About Us custom field using the Advanced Custom Field plugin
+ *
  * Template Name: About Us
  *
  * @package WordPress
@@ -22,31 +24,26 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); 
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
+					$market_description=get_field('market_description');
+					$volunteer=get_field('volunteer');
+					$contact_us=get_field('contact_us');
 
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
+					?>
 
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-					</div><!-- .entry-content -->
+			<section class="about-us-page">
+				<h2>The Fall Farmers Market</h2>
+				<p><?php echo $market_description; ?></p>
+			
+				<h2>Volunteer</h2>
+				<p><?php echo $volunteer; ?></p>
 
-					<footer class="entry-meta">
-						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
-				</article><!-- #post -->
+				<h2>Contact Us</h2>
+				<p><?php echo $contact_us; ?></p>
 
-				<?php comments_template(); ?>
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+			</section>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

@@ -24,35 +24,29 @@ get_header(); ?>
 
 		<div class="title-of-page">
 			<a href="<?php echo home_url(); ?>/our-vendors/">
-				<h2>Our Vendors</h2>
+				<h2>&mdash; Our Vendors &mdash;</h2>
 			</a>
 		</div>
 
 		<div id="content" class="site-content" role="main">
 
-		<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); 
+			<?php query_posts('post_type=our-vendors&orderby=title&order=asc'); ?>
+		
+				<?php /* The loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+	
+						<section class="vendor-title">
+							<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						</section>
 
+					<?php endwhile; ?>
 
-				$vendor_street_address = get_field('vendor_street_address');
-				$vendor_city = get_field('vendor_city');
-				$vendor_state = get_field('vendor_state');
-				$vendor_zipcode = get_field('vendor_zipcode');
-				$vendor_website = get_field('vendor_website'); ?>
+			<?php wp_reset_query(); // resets the altered query back to the original ?>
 
+		<?php twentythirteen_paging_nav(); ?>
 
-				<section class="vendor-title">
-					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-				</section>
-
-			<?php endwhile; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
-			
-
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	</div><!-- #content -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

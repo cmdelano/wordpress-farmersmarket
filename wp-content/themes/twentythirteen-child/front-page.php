@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 				<a href="<?php echo home_url(); ?>">
-				<h2>Upcoming Events</h2>
+				<h2>&ndash; Upcoming Events &ndash;</h2>
 				</a>
 		</div>
 		
@@ -39,7 +39,7 @@ get_header(); ?>
 
 							<section class="event-info">
 
-								<h3>Market Music: <?php the_title(); ?></h3>
+								<a href="<?php echo home_url(); ?>/market-music"><h3>Market Music: <?php the_title(); ?></h3></a>
 	
 								<ul class="event-date">
 									<h4>
@@ -60,12 +60,8 @@ get_header(); ?>
 							<div class="clearfix"></div>
 					
 							<a href="<?php echo home_url(); ?>/market-music/">
-								<h4>More Music</h4>
+								<h4 class="more-events">More Music <span class="more-arrow">&raquo;</span></h4>
 							</a>
-
-							<span class="categories-links"><?php  echo the_category(); ?>
-						</span>
-
 
 						<?php endwhile; // end of the loop. ?>
 				
@@ -89,7 +85,7 @@ get_header(); ?>
 
 
 						<section class="event-info">
-							<h3>Market Art: <?php the_title(); ?></h3>
+							<a href="<?php echo home_url(); ?>/market-art"><h3>Market Art: <?php the_title(); ?></h3></a>
 								<ul class="event-date">
 									<h4>
 										<li><?php echo $artist_month ?></li>
@@ -108,11 +104,9 @@ get_header(); ?>
 						<div class="clearfix"></div>
 
 						<a href="<?php echo home_url(); ?>/market-art/">
-							<h4>More Art</h4>
+							<h4 class="more-events">More Art <span class="more-arrow">&raquo;</span></h4>
 						</a>
 
-						<span class="categories-links"><?php  echo the_category(); ?>
-						</span>
 				
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_query(); // resets the altered query back to the original ?>
@@ -132,7 +126,7 @@ get_header(); ?>
 						$kids_time = get_field('kids_time'); ?>
 
 						<section class="event-info">
-							<h3>Market Kids: <?php the_title(); ?></h3>
+							<a href="<?php echo home_url(); ?>/market-kids"><h3>Market Kids: <?php the_title(); ?></h3></a>
 					
 							<ul class="event-date">
 								<h4>
@@ -152,13 +146,9 @@ get_header(); ?>
 
 						<div class="clearfix"></div>
 
-
 						<a href="<?php echo home_url(); ?>/market-kids/">
-							<h4>More Kids Events</h4>
+							<h4 class="more-events">More Kids Events <span class="more-arrow">&raquo;</span></h4>
 						</a>
-
-						<?php  echo the_category(); ?>
-						<span class="categories-links"><a href="http://localhost:8888/farmersmarket/category/kids/" rel="category tag">Kids</a></span>
 
 					<?php endwhile; // end of the loop. ?>
 				
@@ -166,6 +156,11 @@ get_header(); ?>
 				</li>
 
 			</ul><!-- .upcoming-events -->
+
+			<div class="events-calendar">
+				<a href="<?php echo home_url(); ?>/events/"><h3>&mdash; View Events Calendar &mdash;</h3></a>
+			</div>
+
 		</div><!-- .full-width -->
 	</div><!-- #content -->
 </div><!-- #primary -->

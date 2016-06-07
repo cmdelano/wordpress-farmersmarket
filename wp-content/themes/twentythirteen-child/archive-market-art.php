@@ -17,7 +17,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 			<a href="<?php echo home_url(); ?>/market-art/">
-				<h2>Market Art</h2>
+				<h2>&mdash; Market Art &mdash;</h2>
 			</a>		
 		</div>
 

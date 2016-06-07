@@ -112,3 +112,24 @@ return $query;
 }
 }
 add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
+
+if ( ! function_exists( 'twentythirteen_excerpt_more' ) && ! is_admin() ) :
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ...
+ * and a Continue reading link.
+ *
+ * @since Twenty Thirteen 1.4
+ *
+ * @param string $more Default Read More excerpt link.
+ * @return string Filtered Read More excerpt link.
+ */
+function twentythirteen_excerpt_more( $more ) {
+    $link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+        esc_url( get_permalink( get_the_ID() ) ),
+            /* translators: %s: Name of current post */
+            sprintf( __( 'Read more %s <span class="meta-nav">&raquo;</span>', 'twentythirteen' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+        );
+    return ' &hellip; ' . $link;
+}
+add_filter( 'excerpt_more', 'twentythirteen_excerpt_more' );
+endif;

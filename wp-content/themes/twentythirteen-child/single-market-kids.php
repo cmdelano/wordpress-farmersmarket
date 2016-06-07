@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 			<a href="<?php echo home_url(); ?>/market-kids/">
-				<h2>Market Kids</h2>
+				<h2>&mdash; Market Kids &mdash;</h2>
 				</a>		
 		</div>
 
