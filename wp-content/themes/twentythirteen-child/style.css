@@ -32,8 +32,8 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-	color: inherit; 
+a:hover {
+	color: #ff9933;
 }
 
 .navigation a {
@@ -200,6 +200,7 @@ ul.nav-menu .focus > ul,
 }
 
 .upcoming-events {
+	margin: 45px 0 45px 0;
 	padding: 0;
 }
 
@@ -209,14 +210,14 @@ ul.nav-menu .focus > ul,
 }
 
 .events {
-	padding: 30px;
+	padding: 45px;
 }
 
 .event-info h3 {
 	color: #330000;
 	font-size: 22px;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 0;
 }
 
@@ -228,7 +229,7 @@ ul.nav-menu .focus > ul,
 	color: #ff9933;
 	font-size: 18px;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 500;
 	margin-top: 4px;
 
 }
@@ -236,6 +237,7 @@ ul.nav-menu .focus > ul,
 .more-events {
 	font-size: 20px;
 	color: inherit;
+	font-weight: 700;
 }
 
 .more-arrow {
@@ -257,11 +259,13 @@ ul.nav-menu .focus > ul,
 	background-color: #ffe9a7;
 	min-width: 100%;
 	font-style: normal;
-	padding: 10px 0 10px 0;
+	padding: 20px 0 20px 0;
 }
 
 .title-of-page h2 {
 	color: #330000;
+	font-weight: 500;
+
 }
 
 ul.event-date {
@@ -278,6 +282,8 @@ ul.event-date li {
 .artist-photo {
 	float: left;
 	width: 30%;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 .artist-info {
@@ -295,8 +301,13 @@ a.more-link {
 
 /* styles for the single vendor pages */
 
+.narrow-content {
+	padding-left: 50px;
+}
+
 .vendor-title h3 {
 	color: #330000;
+	padding-top: 25px;
 }
 
 .vendor-info {
@@ -304,15 +315,34 @@ a.more-link {
 	width: 60%;
 }
 
+.vendor-info h5 {
+	margin: 0;
+}
+
 .vendor-photo {
 	float: right;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+/* Styles for the archive musician/artist/kids pages */
+
+.artist-container {
+	margin-top: 30px;
 }
 
 /* footer styles  */
 
-.site-footer .widget-area {
-	max-width: 960px;
-	margin: auto;
+.site-footer {
+	margin-top: 30px;	
+}
+
+.site-footer .widget  {
+    background: #ff9933;
+    color: #fff;
+    float: left;
+    margin-right: 20px;
+    width: 245px;
 }
 
 .site-footer .sidebar-container {
@@ -320,22 +350,135 @@ a.more-link {
     padding: 20px 0;
 }
 
-.site-info {
-	background-color: #ff9933
+.widget .widget-title {
+	font: 500 20px "Source Sans Pro", Helvetica, sans-serif;
 }
 
- .widget .widget-title {
-	font-style: normal;
-	font-weight: 400;
+.widget p {
+	font: 400 16px "Source Sans Pro", Helvetica, sans-serif;
+}
+
+
+/* Style for the Join Us Page */
+
+.join-us-page h2 {
+	font-weight: 500;
+	font-size: 26px;
+	color: #ff9933;
+}
+
+.join-intro {
+	margin-top: 50px;
+}
+
+/* styles for the About Us page */
+
+.about-us-page h2 {
+	font-weight: 500;
+	font-size: 26px;
+	color: #ff9933;
+}
+
+.about-intro {
+	margin-top: 50px;
+}
+
+/* style for the Join Us Application Form */
+
+.ninja-forms-form-title {
+	font-weight: bold;
+	margin-bottom: 20px;
+
+}
+
+.ninja-forms-req-symbol {
+    color: pink;
+}
+
+.ninja-forms-form-wrap label {
+    font-weight: normal;
+}
+
+#ninja_forms_field_5_div_wrap {
+	float: left;
+	width: 45%;
+}
+
+#ninja_forms_field_7_div_wrap {
+	float: 	right;
+	width: 50%;
+}
+
+#ninja_forms_field_2_div_wrap {
+	float: left;
+	width: 45%;
+}
+
+#ninja_forms_field_8_div_wrap {
+	float: 	right;
+	width: 50%;
+}
+
+#ninja_forms_field_4 {
+	background: #ff9933;
+	border-bottom: 2px solid #999;
+	border-radius: 1px;
+
+}
+
+/* Style for the Contact Us form */
+
+#ninja_forms_field_17_div_wrap {
+	float: left;
+	width: 45%;
+}
+
+#ninja_forms_field_21_div_wrap {
+	float: 	right;
+	width: 50%;
+}
+
+#ninja_forms_field_18 {
+	background: #ff9933;
+	border-bottom: 2px solid #999;
+	border-radius: 1px;
 }
 
 /* Styles for the Events Calendar */
 
+#tribe-events-content-wrapper {
+	margin-top: 50px;
+}
+
+.tribe-bar-date-filter {
+	background: #ffe9a7;
+}
+#tribe-bar-dates {
+	background: #ffe9a7;
+}
+
+.tribe-events-sub-nav a {
+	color: #330000;
+}
+
+.tribe-events-calendar th {
+    background-color: #ff9933;
+    color: #33000;
+}
+
+#tribe-events-content .tribe-events-calendar td {
+
+}
+
+.tribe-events-back a {
+	color: #330000;
+}
+
 .tribe-events-notices {
-    background: #ff9933;
+    background: #ffe9a7;
     border: 1px solid #bce8f1;
     border-radius: 4px;
-    color: #fff;
+    color: #330000;
     margin: 10px 0 18px;
     padding: 8px 35px 8px 14px;
     text-shadow: none;
@@ -344,5 +487,7 @@ a.more-link {
 .events-calendar h3 {
 	text-align: center;
 	font-size: 24px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 500;
+	color: #ff9933;
 }

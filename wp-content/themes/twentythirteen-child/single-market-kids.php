@@ -52,14 +52,9 @@ get_header(); ?>
 					</p>
 				</section>
 
-				<div class="clearfix"></div>s
-
-
-				<?php twentythirteen_post_nav(); ?>
+				<div class="clearfix"></div>
 
 			<?php endwhile; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
 
 
 		</div><!-- #content -->

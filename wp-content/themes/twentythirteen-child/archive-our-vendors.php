@@ -30,6 +30,8 @@ get_header(); ?>
 
 		<div id="content" class="site-content" role="main">
 
+			<section class="narrow-content">
+
 			<?php query_posts('post_type=our-vendors&orderby=title&order=asc'); ?>
 		
 				<?php /* The loop */ ?>
@@ -39,9 +41,29 @@ get_header(); ?>
 							<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 						</section>
 
+
 					<?php endwhile; ?>
 
-			<?php wp_reset_query(); // resets the altered query back to the original ?>
+				<?php wp_reset_query(); // resets the altered query back to the original ?>
+
+			</section>
+				
+				<?php /* The loop */ ?>
+					<?php while ( have_posts() ) : the_post(); 
+				 
+					$size='medium';
+					$vendor_page_photo=get_field('vendor-page-photo'); ?>
+
+					<aside class="vendor-photo">
+
+					<?php if ($vendor_page_photo) { ?>
+					<?php echo wp_get_attachment_image( $vendor_page_photo, $size ); ?>	
+					<?php } ?>
+
+
+					</aside>
+
+					<?php endwhile; ?>
 
 		<?php twentythirteen_paging_nav(); ?>
 

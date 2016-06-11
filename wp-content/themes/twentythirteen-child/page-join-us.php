@@ -19,7 +19,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 			<a href="<?php echo the_permalink(); ?>">
-				<h2><?php the_title(); ?></h2>
+				<h2>&mdash; <?php the_title(); ?> &mdash;</h2>
 			</a>
 		</div><!-- .title-of-page -->
 
@@ -37,29 +37,24 @@ get_header(); ?>
 					?>
 
 			<section class="join-us-page">
-				<p><?php echo $join_us_intro; ?></p>
-
-				<div id="vendor-invite">
-					<h2>Vendors</h2>
+				<div class="join-intro">
+					<h2>Be a Part of the Fall Farmers Market</h2>
+						<p><?php echo $join_us_intro; ?></p>
 				</div>
+
+				<h2 id="vendor-invite">Vendors</h2>
 								
 					<p><?php echo $vendor_invitation_text; ?></p>
 
-				<div id="musician-invite">
-					<h2>Musicians</h2>
-				</div>
-				
+				<h2 id="musician-invite">Musicians</h2>
+								
 					<p><?php echo $musician_invitation_text; ?></p>
 
-				<div id="artist-invite">
-					<h2>Artists</h2>
-				</div>
-
+				<h2 id="artist-invite">Artists</h2>
+				
 					<p><?php echo $artist_invitation_text; ?></p>
 
-				<div id="kids-invite">
-					<h2>Kids Events</h2>
-				</div>
+				<h2 id="kids-invite">Kids Events</h2>
 			
 					<p><?php echo $kids_invitation_text; ?></p>
 

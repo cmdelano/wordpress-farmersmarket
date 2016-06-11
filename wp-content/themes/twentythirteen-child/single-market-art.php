@@ -61,8 +61,6 @@ get_header(); ?>
 
 				<div class="clearfix"></div>
 
-				<?php twentythirteen_post_nav(); ?>
-
 
 			<?php endwhile; ?>
 

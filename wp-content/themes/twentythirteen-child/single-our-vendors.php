@@ -46,12 +46,12 @@ get_header(); ?>
 				<section class="vendor-title">
 					<h3><?php the_title(); ?></h3>
 					<div class="vendor-info">
-							<p><?php echo $vendor_street_address ?>, 
+							<h5><?php echo $vendor_street_address ?>, 
 							<?php echo $vendor_city ?>, 
 							<?php echo $vendor_state ?>
-							<?php echo $vendor_zipcode ?></p>
-							<p><?php echo $vendor_phone ?></p>
-							<p><?php echo $vendor_website ?></p>
+							<?php echo $vendor_zipcode ?></h5>
+							<h5><?php echo $vendor_phone ?></h5>
+							<h5><?php echo $vendor_website ?></h5>
 							<p><?php the_content(); ?></p>
 					</div>
 				</section>
@@ -64,15 +64,8 @@ get_header(); ?>
 
 				<div class="clearfix"></div>
 
-				<?php twentythirteen_post_nav(); ?>
-
-
 			<?php endwhile; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
 			
-
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

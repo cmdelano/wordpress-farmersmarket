@@ -35,6 +35,8 @@ get_header(); ?>
 				$musician_time = get_field('musician_time'); ?>
 
 
+				
+			<section class="artist-container">
 				<div class="artist-photo">
 					<?php if ($musician_photo) { ?>
 					<?php echo wp_get_attachment_image( $musician_photo, $size ); ?>	
@@ -54,6 +56,8 @@ get_header(); ?>
 					<p class="artist-description">
 						<?php the_excerpt(); ?>
 					</p>
+				</section>
+
 				</section>
 
 				<div class="clearfix"></div>

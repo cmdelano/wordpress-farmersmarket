@@ -34,12 +34,16 @@ get_header(); ?>
 				$kids_year = get_field('kids_year');
 				$kids_time = get_field('kids_time'); ?>
 
+
+				<section class="artist-container">
 				<div class="artist-photo">
 					<?php if ($kids_photo) { ?>
 					<?php echo wp_get_attachment_image( $kids_photo, $size ); ?>	
 					<?php } ?>
 				</div>
 
+				
+			
 				<section class="artist-info">
 					<a href="<?php the_permalink(); ?>"><h3>Market Kids: <?php the_title(); ?></h3></a>
 					<ul class="event-date">
@@ -53,6 +57,8 @@ get_header(); ?>
 					<p class="artist-description">
 						<?php the_excerpt(); ?>
 					</p>
+				</section>
+
 				</section>
 
 				<div class="clearfix"></div>

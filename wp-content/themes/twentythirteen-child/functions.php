@@ -5,23 +5,7 @@ function theme_enqueue_styles() {
 
 }
 
-/*
- * Set up the content width value based on the theme's design.
- *
- * @see twentythirteen_content_width() for template-specific adjustments.
- */
-//if ( ! isset( $content_width ) )
-//   $content_width = 1000;
-
-// if ( ! isset( $content_width ) )
-//     $content_width = 900;
-
-/*
-* This theme uses a custom image size for featured images, displayed on
-* "standard" posts and pages.
-*/
-    // add_theme_support( 'post-thumbnails' );
-   // set_post_thumbnail_size( 604, 270, true );
+// "function create_custom_post_types" creates a custom post type
 
 function create_custom_post_types() {
 
@@ -89,8 +73,26 @@ register_taxonomy_for_object_type( 'category', 'post','market-music' );
 // Hooks the custom function up to the theme
 add_action( 'init', 'create_custom_post_types' );
 
+// creating the Vendor Page Photo post type
+    register_post_type( 'vendor-page-photo',
+        array(
+            'labels' => array(
+                'name' => __( 'Vendor Page Photo' ),
+                'singular_name' => __( 'Vendor Page Photo' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'our-vendors/vendor-page-photo' ),
+            'taxonomies' => array ( 'post_tag', 'category')
+        )
+    );
 
-// Filter the except length to 20 words.
+
+// Hooks the custom function up to the theme
+add_action( 'init', 'create_custom_post_types' );
+    
+
+// Filter the excerpt length to 20 words
 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
@@ -113,6 +115,8 @@ return $query;
 }
 add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
 
+// used the following function to change "continue reading" to "read more" for excerpts in custom post types
+
 if ( ! function_exists( 'twentythirteen_excerpt_more' ) && ! is_admin() ) :
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ...
@@ -123,6 +127,7 @@ if ( ! function_exists( 'twentythirteen_excerpt_more' ) && ! is_admin() ) :
  * @param string $more Default Read More excerpt link.
  * @return string Filtered Read More excerpt link.
  */
+
 function twentythirteen_excerpt_more( $more ) {
     $link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
         esc_url( get_permalink( get_the_ID() ) ),
