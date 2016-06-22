@@ -30,7 +30,8 @@ get_header(); ?>
 				$artist_date = get_field('artist_date');
 				$artist_year = get_field('artist_year');
 				$artist_time = get_field('artist_time'); 
-				$artist_website = get_field('artist_website'); ?>
+				$artist_website = get_field('artist_website'); 
+				$date = get_field('date'); ?>
 
 				<div class="artist-photo">
 					<?php if ($artist_photo) { ?>
@@ -49,11 +50,7 @@ get_header(); ?>
 								<li> @ <?php echo $artist_time ?></li>
 							</h4>
 						</ul>
-						<h4>
-							<?php if ($artist_website) { ?>
-							<?php echo $artist_website; ?>
-							<?php } ?>
-						</h4>
+						
 						<p class="artist-description">
 							<?php the_content(); ?>
 						</p>

@@ -42,12 +42,12 @@ get_header(); ?>
 
 				<div class="artist-photo">
 					<?php if ($artist_photo) { ?>
-					<?php echo wp_get_attachment_image($artist_photo, $size ); ?>	
+					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($artist_photo, $size ); ?></a>
 					<?php } ?>
 				</div>
 
 				<section class="artist-info">
-					<a href="<?php the_permalink(); ?>"><h3>Market Music: <?php the_title(); ?></h3></a>
+					<a href="<?php the_permalink(); ?>"><h3>Market Art: <?php the_title(); ?></h3></a>
 					<ul class="event-date">
 						<h4>
 							<li><?php echo $artist_month ?></li>

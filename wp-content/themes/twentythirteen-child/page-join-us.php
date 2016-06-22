@@ -58,6 +58,8 @@ get_header(); ?>
 			
 					<p><?php echo $kids_invitation_text; ?></p>
 
+				<h2 id="application-form">Apply To Join Us</h2>
+
 				<?php endwhile; ?>
 			</section>
 

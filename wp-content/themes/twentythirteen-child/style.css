@@ -15,11 +15,11 @@ body {
 	color: #330000;
 }
 
-h1 {
+/*h1 {
 	font-family: Bitter, Georgia, serif;
-}
+}*/
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
@@ -36,18 +36,20 @@ a:hover {
 	color: #ff9933;
 }
 
+a:visited {
+	color: inherit;
+}
+
 .navigation a {
     color: #330000;
 }
 
-.clearfix {
-	clear: both;
+.entry-meta a:hover {
+    color: #ff9933;
 }
 
-.spacer {
-	background-color: #fff;
-	min-width: 1080px;
-	min-height: 20px;
+.clearfix {
+	clear: both;
 }
 
 .site-header .site-title:hover {
@@ -69,11 +71,10 @@ a:hover {
 	width: 100%;
 }
 
-
 .site-title {
 	color: #fff8e4;
 	text-shadow: 1.75px 1.75px #330000;
-	font-size: 60px;
+	font-size: 72px;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
@@ -82,7 +83,7 @@ a:hover {
 
 .site-description {
 	color: #fff8e4;
-	font-size: 22px;
+	font-size: 26px;
 	text-align: center;
 	font-style: normal;
 	font-weight: bold;
@@ -90,25 +91,22 @@ a:hover {
 	text-transform: uppercase;
 }
 
+/* Styles for the navigation menu */
+
 .site-description {
 /*	font-family: Bitter, Georgia, serif;
 */}
 
-.navbar {
-    background-color: #ff9933;
-}
-
-.nav-menu li a {
-	font-size: 22px;
-    margin-right: 50px;
- }
-
- .main-navigation {
+.main-navigation {
 	clear: both;
 	margin: 0 auto;
 	max-width: 960px;
 	min-height: 45px;
 	position: relative;
+}
+
+.navbar {
+    background-color: #ff9933;
 }
 
 ul.nav-menu,
@@ -121,6 +119,12 @@ div.nav-menu > ul {
 	display: inline-block;
 	position: relative;
 }
+
+.nav-menu li a {
+	display: inline-block;
+	font-size: 22px;
+    margin-right: 60px;
+	padding: 20px 20px 20px 30px; }
 
 .nav-menu li:hover > a,
 .nav-menu li a:hover,
@@ -140,7 +144,7 @@ div.nav-menu > ul {
 .nav-menu .children {
 	background-color: #ff9933; /* background color of submenu */
 	color: #ff9933; /* this doesn't make any sense! orange on orange? */
-	border: 2px solid #ffe9a7;
+	border: 1.5px solid #ffe9a7;
 	border-top: 0;
 	padding: 0;
 	position: absolute;
@@ -161,7 +165,7 @@ div.nav-menu > ul {
 
 ul.nav-menu ul a,
 .nav-menu ul ul a {
-	color: #ffe9a7;
+	color: #330000;
 	margin: 0;
 	width: 200px;
 }
@@ -171,6 +175,7 @@ ul.nav-menu ul a:hover,
 ul.nav-menu ul a:focus,
 .nav-menu ul ul a:focus {
 	background-color: #ff9933;  
+	/*color: #330000;*/
 }
 
 ul.nav-menu li:hover > ul,
@@ -187,9 +192,45 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #ffe9a7;
+	color: #330000;
 	font-style: normal;  
 }
+
+/* search bar in nav menu */
+
+.site-header .search-field:focus {
+	width: 180px;
+}
+
+.site-header .search-field {
+	margin: 10px 0;
+}
+
+/* attempt at getting down arrow placed in menu items */
+ 
+/*.nav-menu li::after {
+	float: right;
+ 	display: inline-block;
+	font: 22px 'Genericons';
+	content: "\f431";
+	vertical-align: middle;
+	padding-top: 20px;
+	margin: 0;
+}*/
+
+
+
+/*.menu-item::after {
+	float: right;
+ 	display: inline-block;
+	font: 22px 'Genericons';
+	content: "\f431";
+	vertical-align: middle;
+	padding-top: 15px;
+	margin: 0;
+}*/
+
+
 
 /* Styles for the Front Page */
 
@@ -246,6 +287,14 @@ ul.nav-menu .focus > ul,
 	font-weight: 700;
 }
 
+.events-calendar h3 {
+	text-align: center;
+	font-size: 24px;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 500;
+	color: #330000;
+}
+
 /* Styles that creates the width of main content on each interior page */
 
 .site-content {
@@ -265,6 +314,7 @@ ul.nav-menu .focus > ul,
 .title-of-page h2 {
 	color: #330000;
 	font-weight: 500;
+	font-size: 24px;
 
 }
 
@@ -293,6 +343,7 @@ ul.event-date li {
 
 .artist-info h3 {
 	color: #330000;
+	margin-bottom: 5px;
 }
 
 a.more-link {
@@ -328,7 +379,7 @@ a.more-link {
 /* Styles for the archive musician/artist/kids pages */
 
 .artist-container {
-	margin-top: 30px;
+	margin: 30px 0;
 }
 
 /* footer styles  */
@@ -339,7 +390,7 @@ a.more-link {
 
 .site-footer .widget  {
     background: #ff9933;
-    color: #fff;
+    color: #ffe9a7;
     float: left;
     margin-right: 20px;
     width: 245px;
@@ -351,11 +402,18 @@ a.more-link {
 }
 
 .widget .widget-title {
-	font: 500 20px "Source Sans Pro", Helvetica, sans-serif;
+	font: 500 21px "Source Sans Pro", Helvetica, sans-serif;
+	color: #330000;
+	font-weight: 500;
 }
 
 .widget p {
-	font: 400 16px "Source Sans Pro", Helvetica, sans-serif;
+	font: 400 18px "Source Sans Pro", Helvetica, sans-serif;
+	color: #ffe9a7;
+}
+
+.tweets li {
+	font-size: 18px;
 }
 
 
@@ -385,14 +443,13 @@ a.more-link {
 
 /* style for the Join Us Application Form */
 
+span.ninja-forms-req-symbol {
+    color: #ff9933;
+}
+
 .ninja-forms-form-title {
 	font-weight: bold;
 	margin-bottom: 20px;
-
-}
-
-.ninja-forms-req-symbol {
-    color: pink;
 }
 
 .ninja-forms-form-wrap label {
@@ -421,8 +478,8 @@ a.more-link {
 
 #ninja_forms_field_4 {
 	background: #ff9933;
-	border-bottom: 2px solid #999;
-	border-radius: 1px;
+	border-bottom: .75px solid #999;
+	border-radius: .75px;
 
 }
 
@@ -440,13 +497,105 @@ a.more-link {
 
 #ninja_forms_field_18 {
 	background: #ff9933;
-	border-bottom: 2px solid #999;
-	border-radius: 1px;
+	border-bottom: .75px solid #999;
+	border-radius: .75px;
+}
+
+
+/* Styles for the search results page */
+
+.hentry {
+    padding: 10px 0;
+}
+
+.page-header {
+    background-color: #ffe9a7;
+    text-align: center;
+}
+
+.page-title h2 {
+    font: 500 24px "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    min-width: 100%;
+    padding: 15px 0 15px 0;
+}
+
+/*.entry-title {
+	width: 960px;
+}
+
+.entry-content {
+	max-width: 960ox;
+}*/
+
+.entry-title a {
+    color: #330000;
+    font-size: 30px;
+}
+
+span.categories-links {
+	color: #ff9933;
+}
+
+
+/* Styles for the category archive page */
+
+.archive-header {
+	background-color: #ffe9a7;
+	text-align: center;
+}
+
+.archive-title h2 {
+    font: 500 24px "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    max-width: 940px;
+    padding: 15px 0 15px 0;
+    width: 100%;
+}
+
+/* Styles for the 404 pages, as copies from the parent theme */
+
+.error404 .page-header {
+	background-color: #fff;
+}
+
+.error404 .page-title {
+	line-height: 0.6;
+	margin: 0;
+	padding: 300px;
+	position: relative;
+	text-align: center;
+	width: auto;
+}
+
+.error404 .page-title:before {
+	color: #e8e5ce;
+	content: '';
+	font-size: 964px;
+	line-height: 0.6;
+	overflow: hidden;
+	position: absolute;
+	left: 7px;
+	top: 28px;
+}
+
+.error404 .page-wrapper {
+	background-color: #e8e5ce;
+}
+
+.error404 .page-header,
+.error404 .page-content {
+	margin: 0 auto;
+	max-width: 1040px;
+	padding-bottom: 40px;
+	width: 100%;
 }
 
 /* Styles for the Events Calendar */
 
-#tribe-events-content-wrapper {
+#tribe-events-content {
 	margin-top: 50px;
 }
 
@@ -457,7 +606,10 @@ a.more-link {
 	background: #ffe9a7;
 }
 
-.tribe-events-sub-nav a {
+.tribe-events-single-event-title {
+	font-size: 28px;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	margin: 10px 0;
 	color: #330000;
 }
 
@@ -466,8 +618,9 @@ a.more-link {
     color: #33000;
 }
 
-#tribe-events-content .tribe-events-calendar td {
-
+.tribe-events-schedule h2 {
+	color: #ff9933;
+	margin-top: 0;
 }
 
 .tribe-events-back a {
@@ -484,10 +637,62 @@ a.more-link {
     text-shadow: none;
 }
 
-.events-calendar h3 {
-	text-align: center;
-	font-size: 24px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-weight: 500;
+
+
+.tribe-events-month-event-title a {
+	color: #330000;
+}
+
+.tribe-events-month-event-title a:hover {
 	color: #ff9933;
 }
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+    background-color: #ff9933;
+    color: #330000;
+}
+
+.recurring-info-tooltip, .tribe-events-calendar .tribe-events-tooltip, .tribe-events-week .tribe-events-tooltip {
+    background-color: #f9f9f9;
+    border: 1px solid #666;
+    bottom: 30px;
+    color: #333;
+    display: none;
+    left: 3px;
+    line-height: 1.4;
+    position: absolute;
+    width: 320px;
+    z-index: 6;
+}
+
+/*#tribe-events-content .tribe-events-calendar td {
+	color: #333;
+}*/
+
+/*.tribe_events .hentry {
+	visibility: hidden;
+}*/
+
+
+/*#tribe-events-event-thumb {
+	color: pink;
+}*/
+/*
+.tribe-events-tooltip {
+	background-color: red;
+}
+
+.entry-title .summary {
+	color: red;
+}*/
+
+/* deletes the next and previous link */
+/*.tribe-events-sub-nav { 
+	display: none;
+}*/
+
+/*#tribe-events-content .tribe-events-calendar td {
+	color: 
+}*/
+
+

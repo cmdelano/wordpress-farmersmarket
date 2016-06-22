@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="title-of-page">
 				<a href="<?php echo home_url(); ?>">
-				<h2>&ndash; Upcoming Events &ndash;</h2>
+				<h2>&mdash; Upcoming Events &mdash;</h2>
 				</a>
 		</div>
 		
@@ -52,8 +52,9 @@ get_header(); ?>
 						
 								<div class="event-photo">
 									<?php if ($musician_photo) { ?>
-									<?php echo wp_get_attachment_image( $musician_photo, $size ); ?>
-									<?php } ?>
+									<a href="<?php echo home_url(); ?>/market-music/">
+										<?php echo wp_get_attachment_image( $musician_photo, $size ); ?>
+									<?php } ?></a>
 								</div>
 							</section>
 
@@ -96,8 +97,9 @@ get_header(); ?>
 								</ul>
 							<div class="event-photo">
 								<?php if ($artist_photo) { ?>
+								<a href="<?php echo home_url(); ?>/market-art/">	
 								<?php echo wp_get_attachment_image( $artist_photo, $size ); ?>	
-								<?php } ?>
+								<?php } ?></a>
 							</div>
 						</section>
 
@@ -140,8 +142,9 @@ get_header(); ?>
 
 						<div class="event-photo">
 							<?php if ($kids_photo) { ?>
+							<a href="<?php echo home_url(); ?>/market-kids">
 							<?php echo wp_get_attachment_image( $kids_photo, $size ); ?>	
-							<?php } ?>
+							<?php } ?></a>
 						</div>
 
 						<div class="clearfix"></div>

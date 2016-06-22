@@ -38,7 +38,7 @@ get_header(); ?>
 				<section class="artist-container">
 				<div class="artist-photo">
 					<?php if ($kids_photo) { ?>
-					<?php echo wp_get_attachment_image( $kids_photo, $size ); ?>	
+					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $kids_photo, $size ); ?></a>
 					<?php } ?>
 				</div>
 

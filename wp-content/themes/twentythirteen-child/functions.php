@@ -2,10 +2,12 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . 'genericons/font/genericons.css' );
 }
+// this function enqueus the parent theme's styles without using @import
 
-// "function create_custom_post_types" creates a custom post type
+
+// function create_custom_post_types" creates a custom post type
 
 function create_custom_post_types() {
 
@@ -37,8 +39,6 @@ function create_custom_post_types() {
             'taxonomies' => array ( 'post_tag', 'category' )
         )
     );
-
-register_taxonomy_for_object_type( 'category', 'post','market-music' );
 
 
 // creating the Market Art post type
@@ -73,23 +73,6 @@ register_taxonomy_for_object_type( 'category', 'post','market-music' );
 // Hooks the custom function up to the theme
 add_action( 'init', 'create_custom_post_types' );
 
-// creating the Vendor Page Photo post type
-    register_post_type( 'vendor-page-photo',
-        array(
-            'labels' => array(
-                'name' => __( 'Vendor Page Photo' ),
-                'singular_name' => __( 'Vendor Page Photo' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array( 'slug' => 'our-vendors/vendor-page-photo' ),
-            'taxonomies' => array ( 'post_tag', 'category')
-        )
-    );
-
-
-// Hooks the custom function up to the theme
-add_action( 'init', 'create_custom_post_types' );
     
 
 // Filter the excerpt length to 20 words
@@ -115,6 +98,7 @@ return $query;
 }
 add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
 
+
 // used the following function to change "continue reading" to "read more" for excerpts in custom post types
 
 if ( ! function_exists( 'twentythirteen_excerpt_more' ) && ! is_admin() ) :
@@ -128,6 +112,8 @@ if ( ! function_exists( 'twentythirteen_excerpt_more' ) && ! is_admin() ) :
  * @return string Filtered Read More excerpt link.
  */
 
+
+// Changes the arrow for the Read More link
 function twentythirteen_excerpt_more( $more ) {
     $link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
         esc_url( get_permalink( get_the_ID() ) ),
@@ -138,3 +124,14 @@ function twentythirteen_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'twentythirteen_excerpt_more' );
 endif;
+
+
+// Limits searches to the custom post types listed and excludes the tribe events posts
+
+function searchfilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type', array('market-kids', 'market-art', 'market-music', 'our-vendors'));
+    }
+return $query;
+}
+add_filter('pre_get_posts','searchfilter');

@@ -51,7 +51,7 @@ get_header(); ?>
 							<?php echo $vendor_state ?>
 							<?php echo $vendor_zipcode ?></h5>
 							<h5><?php echo $vendor_phone ?></h5>
-							<h5><?php echo $vendor_website ?></h5>
+							<a href="htt://"><h5><?php echo $vendor_website ?></h5></a>
 							<p><?php the_content(); ?></p>
 					</div>
 				</section>
