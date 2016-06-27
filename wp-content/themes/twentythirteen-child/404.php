@@ -11,16 +11,18 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-	<header class="page-header">
-				<div class="page-title"><h2><?php _e( 'Not Found', 'twentythirteen' ); ?></h2><div>
+	<header class="error-page-header">
+				<div class="title-of-page"><h2>&mdash; <?php _e( 'Page Not Found', 'twentythirteen' ); ?> &mdash;</h2><div>
 			</header>
 
 		<div id="content" class="site-content" role="main">
 
+		<h1 class="page-title">The page couldn't be found (404 error)</h1>
+
 			<div class="page-wrapper">
 				<div class="page-content">
-					<h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2>
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
+					<!-- <h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2> -->
+					<p><?php _e( 'We&rsquo;re sorry, but it looks as if nothing was found at this location. Please try a search below.', 'twentythirteen' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->

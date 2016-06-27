@@ -11,22 +11,19 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-	<header class="page-header">
-				<div class="page-title"><h2>&mdash; <?php printf( __( 'Search Results for: %s', 'twentythirteen' ), get_search_query() ); ?> &mdash;</h2></div>
-			</header>
+	<div class="title-of-page">
+		<h2>&mdash; <?php printf( __( 'Search Results for: %s', 'twentythirteen'), get_search_query() ); ?> &mdash;</h2>
+	</div>
 
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
-			
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
 
-				
 			<?php endwhile; ?>
 
 		<?php else : ?>

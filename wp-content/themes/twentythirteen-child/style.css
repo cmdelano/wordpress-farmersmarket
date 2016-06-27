@@ -6,8 +6,6 @@ Version: 1.0
 Template: twentythirteen
 */
 
-/*@import url("../twentythirteen/style.css");
-*/
 
 body {
 	
@@ -233,6 +231,10 @@ ul.nav-menu .focus > ul,
 
 
 /* Styles for the Front Page */
+
+/*#content {
+	margin: auto;
+}*/
 
 .full-width {
 	width: 1200px;
@@ -521,6 +523,21 @@ span.ninja-forms-req-symbol {
     padding: 15px 0 15px 0;
 }
 
+h1.page-title {
+	background-color: #ffffff;
+	color: #33000;
+	font-size: 32px;
+	padding: 100mpx;
+}
+
+.page-content {
+	background-color: #ffe9a7;
+	padding: 40px;	
+	margin: 0 auto;
+	max-width: 1040px;
+	width: 100%;
+}
+
 /*.entry-title {
 	width: 960px;
 }
@@ -555,40 +572,29 @@ span.categories-links {
     width: 100%;
 }
 
-/* Styles for the 404 pages, as copies from the parent theme */
+/* Styles for the 404 page, as copied from the parent theme */
 
-.error404 .page-header {
-	background-color: #fff;
-}
 
 .error404 .page-title {
 	line-height: 0.6;
 	margin: 0;
-	padding: 300px;
+	padding: 100px; /* changed from original where 404 genericon removed*/
 	position: relative;
 	text-align: center;
 	width: auto;
 }
 
 .error404 .page-title:before {
-	color: #e8e5ce;
-	content: '';
-	font-size: 964px;
-	line-height: 0.6;
-	overflow: hidden;
-	position: absolute;
-	left: 7px;
-	top: 28px;
+	content: ''; /* changed from original genericon */
+	font-size: 0px; /* changed from original size of genericon */
 }
 
-.error404 .page-wrapper {
-	background-color: #e8e5ce;
-}
 
 .error404 .page-header,
 .error404 .page-content {
 	margin: 0 auto;
 	max-width: 1040px;
+	page-top: 40px;
 	padding-bottom: 40px;
 	width: 100%;
 }
@@ -695,4 +701,122 @@ span.categories-links {
 	color: 
 }*/
 
+
+/**
+* Media queries 
+**/
+
+  @media (max-width: 1199px) {
+
+
+ #content	.full-width {
+		margin-right: 0 auto;
+		width: 100%;
+	}
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	.events {
+		padding: 35px;
+		margin-right: 0;
+}
+
+	.events-calendar {
+		text-align: center;
+	}
+}
+	
+@media (max-width: 1099px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	.events {
+		padding: 25px;
+		margin: 0 auto;
+	}
+}
+
+
+@media (max-width: 1049px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	.events {
+		padding: 0 30px 0 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 999px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	li.events {
+		padding: 0 10px 0 0;
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 849px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	li.events {
+		padding-left: 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 799px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	li.events {
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	li.events {
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 643px) {
+
+	.upcoming-events {
+		margin: 0 auto;
+	}
+
+	li.events {
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 500px) {
+
+	
+}
 
