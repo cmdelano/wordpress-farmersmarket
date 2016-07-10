@@ -24,7 +24,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); 
 
 
-				$size = "large";
+				$size = "medium";
 				$artist_photo = get_field('artist_photo');
 				$artist_month = get_field('artist_month');
 				$artist_date = get_field('artist_date');
@@ -32,6 +32,7 @@ get_header(); ?>
 				$artist_time = get_field('artist_time'); 
 				$artist_website = get_field('artist_website'); 
 				$date = get_field('date'); ?>
+
 
 				<div class="artist-photo">
 					<?php if ($artist_photo) { ?>

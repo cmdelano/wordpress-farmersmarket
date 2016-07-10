@@ -1,7 +1,7 @@
 /*
 Theme Name: Child of Twenty Thirteen
 Author: Cindy DeLano
-Description: This is a theme for a fall farmers market site
+Description: This is a theme for a faux fall farmers market site
 Version: 1.0
 Template: twentythirteen
 */
@@ -13,16 +13,8 @@ body {
 	color: #330000;
 }
 
-/*h1 {
-	font-family: Bitter, Georgia, serif;
-}*/
-
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-}
-
-h2 {
-	font-size: 24px;
 }
 
 a {
@@ -38,35 +30,14 @@ a:visited {
 	color: inherit;
 }
 
-.navigation a {
-    color: #330000;
-}
-
-.entry-meta a:hover {
-    color: #ff9933;
-}
-
 .clearfix {
 	clear: both;
 }
 
+/* Masthead styles */
+
 .site-header .site-title:hover {
 	text-decoration: none;
-}
-
-.site-header {
-	position: relative;
-}
-
-.site-header .home-link {
-	color: #141412; /* is this color active? */
-	display: block;
-	margin: 0 auto;
-	max-width: 1080px;
-	min-height: 380px;
-	padding: 0 20px;
-	text-decoration: none;
-	width: 100%;
 }
 
 .site-title {
@@ -89,40 +60,22 @@ a:visited {
 	text-transform: uppercase;
 }
 
-/* Styles for the navigation menu */
-
-.site-description {
-/*	font-family: Bitter, Georgia, serif;
-*/}
+/* Navigation menu styles */
 
 .main-navigation {
-	clear: both;
-	margin: 0 auto;
 	max-width: 960px;
-	min-height: 45px;
-	position: relative;
 }
 
 .navbar {
     background-color: #ff9933;
 }
 
-ul.nav-menu,
-div.nav-menu > ul {
-	margin: 0;
-	padding: 0 40px 0 0;
-}
-
-.nav-menu li {
-	display: inline-block;
-	position: relative;
-}
-
 .nav-menu li a {
 	display: inline-block;
 	font-size: 22px;
     margin-right: 60px;
-	padding: 20px 20px 20px 30px; }
+	padding: 20px; 
+}
 
 .nav-menu li:hover > a,
 .nav-menu li a:hover,
@@ -140,25 +93,9 @@ div.nav-menu > ul {
 
 .nav-menu .sub-menu,
 .nav-menu .children {
-	background-color: #ff9933; /* background color of submenu */
-	color: #ff9933; /* this doesn't make any sense! orange on orange? */
-	border: 1.5px solid #ffe9a7;
-	border-top: 0;
-	padding: 0;
-	position: absolute;
-	left: -2px;
-	z-index: 99999;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-}
-
-.nav-menu .sub-menu ul,
-.nav-menu .children ul {
-	border-left: 0;
-	left: 100%;
-	top: 0;
+	background-color: #ff9933;
+	color: #ff9933;
+	border: none;
 }
 
 ul.nav-menu ul a,
@@ -173,17 +110,6 @@ ul.nav-menu ul a:hover,
 ul.nav-menu ul a:focus,
 .nav-menu ul ul a:focus {
 	background-color: #ff9933;  
-	/*color: #330000;*/
-}
-
-ul.nav-menu li:hover > ul,
-.nav-menu ul li:hover > ul,
-ul.nav-menu .focus > ul,
-.nav-menu .focus > ul {
-	clip: inherit;
-	overflow: inherit;
-	height: inherit;
-	width: inherit;
 }
 
 .nav-menu .current_page_item > a,
@@ -194,47 +120,25 @@ ul.nav-menu .focus > ul,
 	font-style: normal;  
 }
 
-/* search bar in nav menu */
+/* Small menu */
+
+.toggled-on .nav-menu > li a:hover,
+	.toggled-on .nav-menu > ul a:hover {
+		background-color: #ff9933;
+		color: #ffe9a7;
+}
+
+/* Search field in nav menu */
 
 .site-header .search-field:focus {
-	width: 180px;
+	width: 160px;
 }
 
 .site-header .search-field {
 	margin: 10px 0;
 }
 
-/* attempt at getting down arrow placed in menu items */
- 
-/*.nav-menu li::after {
-	float: right;
- 	display: inline-block;
-	font: 22px 'Genericons';
-	content: "\f431";
-	vertical-align: middle;
-	padding-top: 20px;
-	margin: 0;
-}*/
-
-
-
-/*.menu-item::after {
-	float: right;
- 	display: inline-block;
-	font: 22px 'Genericons';
-	content: "\f431";
-	vertical-align: middle;
-	padding-top: 15px;
-	margin: 0;
-}*/
-
-
-
-/* Styles for the Front Page */
-
-/*#content {
-	margin: auto;
-}*/
+/* Front page styles */
 
 .full-width {
 	width: 1200px;
@@ -243,7 +147,7 @@ ul.nav-menu .focus > ul,
 }
 
 .upcoming-events {
-	margin: 45px 0 45px 0;
+	margin: 45px 0;
 	padding: 0;
 }
 
@@ -253,13 +157,10 @@ ul.nav-menu .focus > ul,
 }
 
 .events {
-	padding: 45px;
+	margin: 45px;
 }
 
 .event-info h3 {
-	color: #330000;
-	font-size: 22px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 700;
 	margin-bottom: 0;
 }
@@ -271,10 +172,8 @@ ul.nav-menu .focus > ul,
 .event-date h4 {
 	color: #ff9933;
 	font-size: 18px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 500;
 	margin-top: 4px;
-
 }
 
 .more-events {
@@ -292,10 +191,8 @@ ul.nav-menu .focus > ul,
 .events-calendar h3 {
 	text-align: center;
 	font-size: 24px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 500;
-	color: #330000;
-}
+	}
 
 /* Styles that creates the width of main content on each interior page */
 
@@ -314,10 +211,8 @@ ul.nav-menu .focus > ul,
 }
 
 .title-of-page h2 {
-	color: #330000;
 	font-weight: 500;
 	font-size: 24px;
-
 }
 
 ul.event-date {
@@ -334,13 +229,13 @@ ul.event-date li {
 .artist-photo {
 	float: left;
 	width: 30%;
-	margin-top: 30px;
-	margin-bottom: 10px;
+	margin: 40px 0 10px 0;
 }
 
 .artist-info {
 	float: right;
 	width: 60%;
+	margin: 10px 0;
 }
 
 .artist-info h3 {
@@ -352,7 +247,7 @@ a.more-link {
 	color: #ff9933;
 }
 
-/* styles for the single vendor pages */
+/* Styles for the single vendor pages */
 
 .narrow-content {
 	padding-left: 50px;
@@ -378,13 +273,7 @@ a.more-link {
 	margin-top: 0;
 }
 
-/* Styles for the archive musician/artist/kids pages */
-
-.artist-container {
-	margin: 30px 0;
-}
-
-/* footer styles  */
+/* Footer styles  */
 
 .site-footer {
 	margin-top: 30px;	
@@ -404,20 +293,23 @@ a.more-link {
 }
 
 .widget .widget-title {
-	font: 500 21px "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
 	color: #330000;
 	font-weight: 500;
+	font-style: normal;
 }
 
 .widget p {
-	font: 400 18px "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
 	color: #ffe9a7;
 }
 
 .tweets li {
+	font-weight: 400;
 	font-size: 18px;
 }
-
 
 /* Style for the Join Us Page */
 
@@ -428,18 +320,6 @@ a.more-link {
 }
 
 .join-intro {
-	margin-top: 50px;
-}
-
-/* styles for the About Us page */
-
-.about-us-page h2 {
-	font-weight: 500;
-	font-size: 26px;
-	color: #ff9933;
-}
-
-.about-intro {
 	margin-top: 50px;
 }
 
@@ -482,7 +362,18 @@ span.ninja-forms-req-symbol {
 	background: #ff9933;
 	border-bottom: .75px solid #999;
 	border-radius: .75px;
+}
 
+/* Styles for the About Us page */
+
+.about-us-page h2 {
+	font-weight: 500;
+	font-size: 26px;
+	color: #ff9933;
+}
+
+.about-intro {
+	margin-top: 50px;
 }
 
 /* Style for the Contact Us form */
@@ -503,7 +394,6 @@ span.ninja-forms-req-symbol {
 	border-radius: .75px;
 }
 
-
 /* Styles for the search results page */
 
 .hentry {
@@ -516,7 +406,7 @@ span.ninja-forms-req-symbol {
 }
 
 .page-title h2 {
-    font: 500 24px "Source Sans Pro", Helvetica, sans-serif;
+    font: 500 24px;
     font-size: 24px;
     margin: 0 auto;
     min-width: 100%;
@@ -527,7 +417,7 @@ h1.page-title {
 	background-color: #ffffff;
 	color: #33000;
 	font-size: 32px;
-	padding: 100mpx;
+	padding: 100px;
 }
 
 .page-content {
@@ -538,25 +428,14 @@ h1.page-title {
 	width: 100%;
 }
 
-/*.entry-title {
-	width: 960px;
-}
-
-.entry-content {
-	max-width: 960ox;
-}*/
 
 .entry-title a {
     color: #330000;
     font-size: 30px;
 }
 
-span.categories-links {
-	color: #ff9933;
-}
 
-
-/* Styles for the category archive page */
+/* Styles for the category archives page */
 
 .archive-header {
 	background-color: #ffe9a7;
@@ -564,7 +443,8 @@ span.categories-links {
 }
 
 .archive-title h2 {
-    font: 500 24px "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 24px;
     margin: 0 auto;
     max-width: 940px;
@@ -572,16 +452,18 @@ span.categories-links {
     width: 100%;
 }
 
-/* Styles for the 404 page, as copied from the parent theme */
+.entry-meta a:hover {
+    color: #ff9933;
+}
 
+span.categories-links {
+	color: #ff9933;
+}
+
+/* Styles for the 404 page */
 
 .error404 .page-title {
-	line-height: 0.6;
-	margin: 0;
 	padding: 100px; /* changed from original where 404 genericon removed*/
-	position: relative;
-	text-align: center;
-	width: auto;
 }
 
 .error404 .page-title:before {
@@ -589,12 +471,10 @@ span.categories-links {
 	font-size: 0px; /* changed from original size of genericon */
 }
 
-
 .error404 .page-header,
 .error404 .page-content {
 	margin: 0 auto;
 	max-width: 1040px;
-	page-top: 40px;
 	padding-bottom: 40px;
 	width: 100%;
 }
@@ -608,13 +488,13 @@ span.categories-links {
 .tribe-bar-date-filter {
 	background: #ffe9a7;
 }
+
 #tribe-bar-dates {
 	background: #ffe9a7;
 }
 
 .tribe-events-single-event-title {
 	font-size: 28px;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	margin: 10px 0;
 	color: #330000;
 }
@@ -643,8 +523,6 @@ span.categories-links {
     text-shadow: none;
 }
 
-
-
 .tribe-events-month-event-title a {
 	color: #330000;
 }
@@ -671,89 +549,51 @@ span.categories-links {
     z-index: 6;
 }
 
-/*#tribe-events-content .tribe-events-calendar td {
-	color: #333;
-}*/
-
-/*.tribe_events .hentry {
-	visibility: hidden;
-}*/
-
-
-/*#tribe-events-event-thumb {
-	color: pink;
-}*/
-/*
-.tribe-events-tooltip {
-	background-color: red;
-}
-
-.entry-title .summary {
-	color: red;
-}*/
-
-/* deletes the next and previous link */
-/*.tribe-events-sub-nav { 
-	display: none;
-}*/
-
-/*#tribe-events-content .tribe-events-calendar td {
-	color: 
-}*/
-
-
 /**
 * Media queries 
 **/
 
-  @media (max-width: 1199px) {
+@media (max-width: 1199px) {
 
-
- #content	.full-width {
-		margin-right: 0 auto;
+	#content .full-width {
+		margin: 0;
 		width: 100%;
 	}
 
 	.upcoming-events {
-		margin: 0 auto;
+		margin: 45px auto;
 	}
 
 	.events {
-		padding: 35px;
-		margin-right: 0;
-}
+		padding: 0 25px 0 15px;
+		margin: 45px auto;
+	}
 
 	.events-calendar {
 		text-align: center;
 	}
+
 }
 	
-@media (max-width: 1099px) {
-
-	.upcoming-events {
-		margin: 0 auto;
-	}
-
-	.events {
-		padding: 25px;
-		margin: 0 auto;
-	}
-}
-
-
 @media (max-width: 1049px) {
 
 	.upcoming-events {
-		margin: 0 auto;
+		margin: 45px auto;
 	}
 
 	.events {
-		padding: 0 30px 0 0;
-		margin: 0 auto;
+		padding: 0 15px 0 5px;
+		margin: 45px auto;
 	}
+
 }
 
 @media (max-width: 999px) {
+
+	.site-content {
+		margin: auto;
+		padding: 10px 10px 10px 120px;
+	}
 
 	.upcoming-events {
 		margin: 0 auto;
@@ -763,60 +603,143 @@ span.categories-links {
 		padding: 0 10px 0 0;
 		display: block;
 		padding: 0;
-		margin: 0 auto;
-	}
-}
-
-@media (max-width: 849px) {
-
-	.upcoming-events {
-		margin: 0 auto;
+		margin:  45px auto;
+		max-width: 100%;
+		width: 40%;
 	}
 
-	li.events {
-		padding-left: 0;
-		margin: 0 auto;
-	}
-}
-
-@media (max-width: 799px) {
-
-	.upcoming-events {
-		margin: 0 auto;
+	.artist-photo {
+		float: none;
+		margin-top: 30px;
+		margin-bottom: 10px;
 	}
 
-	li.events {
-		padding: 0;
-		margin: 0 auto;
+	.artist-info {
+		float: none;
+		width: 90%;
+	}
+
+	.vendor-info {
+		float: none;
+		width: 90%;
+	}
+
+	.vendor-photo {
+		float: none;
+		margin-top: 30px;
+		margin-bottom: 10px;
 	}
 }
 
 @media (max-width: 767px) {
 
+	.site-content {
+		margin: auto;
+		padding: 10px 10px 10px 100px;
+	}
+
+	.site-title {
+		font-size: 40px;
+		padding-top: 20px;
+	}
+
+	.site-description {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
 	.upcoming-events {
 		margin: 0 auto;
+		width: 100%;
 	}
 
 	li.events {
+		padding: 0 10px 0 0;
+		display: block;
 		padding: 0;
-		margin: 0 auto;
+		margin: auto;
+		max-width: 100%;
+		width: 40%;
 	}
+
+	.vendor-photo {
+		float: left;
+		padding-top: 0;
+		margin-top: 0;
+}
+
 }
 
 @media (max-width: 643px) {
 
+	.site-content {
+		max-width: 940px;
+		margin: auto;
+		padding: 10px 10px 10px 50px;
+	}
+
 	.upcoming-events {
 		margin: 0 auto;
+		width: 100%;
+	}
+
+	li.events {
+		padding: 0 10px 0 0;
+		display: block;
+		padding: 0;
+		margin: auto;
+		max-width: 100%;
+		width: 40%;
+	}
+
+}
+
+
+@media (max-width: 480px) {
+
+	.site-content {
+		max-width: 940px;
+		margin: auto;
+		padding: 10px 10px 10px 30px;
+	}
+
+	.upcoming-events {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	li.events {
+		padding: 0 10px 0 0;
+		display: block;
+		padding: 0;
+		margin-left: 20px;
+		max-width: 100%;
+		width: 40%;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.site-content {
+		max-width: 940px;
+		margin: auto;
+		padding: 10px;
+	}
+
+	.upcoming-events {
+		margin: 0 auto;
+		width: 100%;
 	}
 
 	li.events {
 		padding: 0;
-		margin: 0 auto;
+		display: block;
+		padding: 0;
+		margin-left: 0;
+		max-width: 100%;
+		width: 40%;
 	}
-}
 
-@media (max-width: 500px) {
-
-	
 }
 

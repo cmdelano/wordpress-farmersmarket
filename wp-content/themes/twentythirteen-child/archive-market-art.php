@@ -34,11 +34,8 @@ get_header(); ?>
 				$artist_year = get_field('artist_year');
 				$artist_time = get_field('artist_time'); 
 				$artist_website = get_field('artist_website'); 
-
-				// $category = get_field('category');
 				?>
 
-			<section class="artist-container">
 
 				<div class="artist-photo">
 					<?php if ($artist_photo) { ?>
@@ -60,8 +57,7 @@ get_header(); ?>
 						<?php the_excerpt(); ?>
 					</p>
 				</section>
-			</section>
-
+				
 				<div class="clearfix"></div>
 
 			<?php endwhile; ?>

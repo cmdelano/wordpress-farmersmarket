@@ -21,14 +21,8 @@ get_header(); ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 				<?php endif; ?>
 			</header><!-- .archive-header -->
+		
 		<div id="content"  class="site-content" role="main">
-
-		<?php if (is_category('music')) : ?>
-		<p>This is the text to describe category A</p>
-		<?php elseif (is_category('art')) : ?>
-		<p>This is the text to describe category B</p>
-		<?php elseif (is_category('kids')) : ?>
-		<?php endif; ?>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

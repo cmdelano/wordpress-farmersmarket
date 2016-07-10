@@ -35,14 +35,11 @@ get_header(); ?>
 				$kids_time = get_field('kids_time'); ?>
 
 
-				<section class="artist-container">
 				<div class="artist-photo">
 					<?php if ($kids_photo) { ?>
 					<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $kids_photo, $size ); ?></a>
 					<?php } ?>
 				</div>
-
-				
 			
 				<section class="artist-info">
 					<a href="<?php the_permalink(); ?>"><h3>Market Kids: <?php the_title(); ?></h3></a>
@@ -57,8 +54,6 @@ get_header(); ?>
 					<p class="artist-description">
 						<?php the_excerpt(); ?>
 					</p>
-				</section>
-
 				</section>
 
 				<div class="clearfix"></div>

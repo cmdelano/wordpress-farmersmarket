@@ -715,8 +715,8 @@ video {
 
 figure.wp-caption.alignleft,
 img.alignleft {
-	margin: 5px 20px 5px 0;
-}
+/*	margin: 5px 20px 5px 0;
+*/}
 
 .wp-caption.alignleft {
 	margin: 5px 10px 5px 0;

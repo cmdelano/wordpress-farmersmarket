@@ -50,7 +50,7 @@ get_header(); ?>
 					<p class="artist-description">
 						<?php the_content(); ?>
 					</p>
-				</section>
+				</section><!-- .artist-info -->
 
 				<div class="clearfix"></div>
 
