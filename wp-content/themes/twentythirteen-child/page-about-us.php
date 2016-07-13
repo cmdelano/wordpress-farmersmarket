@@ -4,11 +4,14 @@
  *
  * Fields all pulled from the About Us custom field using the Advanced Custom Field plugin
  *
+ * The contact form uses the Ninja Form plugin
+ *
+ *
  * Template Name: About Us
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen_Child
- * @since Twenty Thirteen_Child 1.0
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>

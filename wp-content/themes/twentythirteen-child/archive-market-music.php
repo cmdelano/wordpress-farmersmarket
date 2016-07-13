@@ -1,6 +1,6 @@
 <?php
 /**
- * The template the displaying the Market Music archives pages
+ * The template for displaying the Market Music custom post type archives pages
  *
  *
  * This template pulls in several fields from the Advanced Custom Fields plugin.

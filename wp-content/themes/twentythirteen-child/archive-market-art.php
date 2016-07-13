@@ -1,6 +1,6 @@
 <?php
 /**
- * The template the displaying the Market Art archives pages
+ * The template for displaying the Market Art custom post type archives page
  *
  *
  * This template pulls in several fields from the Advanced Custom Fields plugin.

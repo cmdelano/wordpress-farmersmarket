@@ -1,12 +1,12 @@
 <?php
 /**
- * The Header template for the farmers market theme
+ * The Header template for the fall farmers market theme
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Child of Twenty_Thirteen
- * @since Child of Twenty Thirteen 1.0
+ * @subpackage Twenty_Thirteen_Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 ?><!DOCTYPE html>
@@ -33,7 +33,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- <div id="logo"></div> -->
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
 		<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen_Child
- * @since Child of Twenty Thirteen 1.0
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>

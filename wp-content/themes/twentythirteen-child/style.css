@@ -8,7 +8,6 @@ Template: twentythirteen
 
 
 body {
-	
 	background-color: #ffffff;
 	color: #330000;
 }
@@ -42,20 +41,20 @@ a:visited {
 
 .site-title {
 	color: #fff8e4;
-	text-shadow: 1.75px 1.75px #330000;
 	font-size: 72px;
 	font-weight: 700;
-	text-align: center;
-	text-transform: uppercase;
 	padding-top: 100px;
+	text-align: center;
+	text-shadow: 1.75px 1.75px #330000;
+	text-transform: uppercase;
 }
 
 .site-description {
 	color: #fff8e4;
 	font-size: 26px;
-	text-align: center;
 	font-style: normal;
 	font-weight: bold;
+	text-align: center;
 	text-shadow: 0.75px 0.75px #330000;
 	text-transform: uppercase;
 }
@@ -141,9 +140,9 @@ ul.nav-menu ul a:focus,
 /* Front page styles */
 
 .full-width {
-	width: 1200px;
 	margin: auto;
 	padding: 10px;
+	width: 1200px;
 }
 
 .upcoming-events {
@@ -152,8 +151,8 @@ ul.nav-menu ul a:focus,
 }
 
 .upcoming-events li {
-	list-style-type: none;
 	display: inline-block;
+	list-style-type: none;
 }
 
 .events {
@@ -177,8 +176,8 @@ ul.nav-menu ul a:focus,
 }
 
 .more-events {
-	font-size: 20px;
 	color: inherit;
+	font-size: 20px;
 	font-weight: 700;
 }
 
@@ -197,17 +196,17 @@ ul.nav-menu ul a:focus,
 /* Styles that creates the width of main content on each interior page */
 
 .site-content {
-	max-width: 940px;
 	margin: auto;
+	max-width: 940px;
 	padding: 10px;
 }
 
 .title-of-page {
-	text-align: center;
 	background-color: #ffe9a7;
-	min-width: 100%;
 	font-style: normal;
+	min-width: 100%;
 	padding: 20px 0 20px 0;
+	text-align: center;
 }
 
 .title-of-page h2 {
@@ -220,22 +219,22 @@ ul.event-date {
 }
 
 ul.event-date li {
-	list-style-type: none;
 	display: inline-block;
+	list-style-type: none;
 }
 
 /* Styles for the single artist/musician/kids pages */
 
 .artist-photo {
 	float: left;
-	width: 30%;
 	margin: 40px 0 10px 0;
+	width: 30%;
 }
 
 .artist-info {
 	float: right;
-	width: 60%;
 	margin: 10px 0;
+	width: 60%;
 }
 
 .artist-info h3 {
@@ -269,8 +268,8 @@ a.more-link {
 
 .vendor-photo {
 	float: right;
-	padding-top: 0;
 	margin-top: 0;
+	padding-top: 0;
 }
 
 /* Footer styles  */
@@ -280,8 +279,8 @@ a.more-link {
 }
 
 .site-footer .widget  {
+	color: #ffe9a7;
     background: #ff9933;
-    color: #ffe9a7;
     float: left;
     margin-right: 20px;
     width: 245px;
@@ -292,31 +291,40 @@ a.more-link {
     padding: 20px 0;
 }
 
+.site-footer .widget-area {
+    margin: 60px auto; 
+    max-width: 1040px;
+    width: 100%;
+}
+
 .widget .widget-title {
-	font-weight: 500;
-	font-size: 21px;
 	color: #330000;
-	font-weight: 500;
+	font-size: 21px;
 	font-style: normal;
+	font-weight: 500;
+}
+
+.widget {
+	padding: 10px;
 }
 
 .widget p {
-	font-weight: 400;
-	font-size: 18px;
 	color: #ffe9a7;
+	font-size: 16px;
+	font-weight: 400;
 }
 
 .tweets li {
+	font-size: 16px;
 	font-weight: 400;
-	font-size: 18px;
 }
 
 /* Style for the Join Us Page */
 
 .join-us-page h2 {
-	font-weight: 500;
-	font-size: 26px;
 	color: #ff9933;
+	font-size: 26px;
+	font-weight: 500;
 }
 
 .join-intro {
@@ -367,8 +375,8 @@ span.ninja-forms-req-symbol {
 /* Styles for the About Us page */
 
 .about-us-page h2 {
-	font-weight: 500;
 	font-size: 26px;
+	font-weight: 500;
 	color: #ff9933;
 }
 
@@ -401,12 +409,12 @@ span.ninja-forms-req-symbol {
 }
 
 .page-header {
-    background-color: #ffe9a7;
+    background-color: #fff;
     text-align: center;
 }
 
 .page-title h2 {
-    font: 500 24px;
+    font-weight: 500;
     font-size: 24px;
     margin: 0 auto;
     min-width: 100%;
@@ -428,7 +436,6 @@ h1.page-title {
 	width: 100%;
 }
 
-
 .entry-title a {
     color: #330000;
     font-size: 30px;
@@ -443,9 +450,9 @@ h1.page-title {
 }
 
 .archive-title h2 {
-    font-weight: 500;
     font-style: normal;
     font-size: 24px;
+    font-weight: 500;
     margin: 0 auto;
     max-width: 940px;
     padding: 15px 0 15px 0;
@@ -495,13 +502,13 @@ span.categories-links {
 
 .tribe-events-single-event-title {
 	font-size: 28px;
-	margin: 10px 0;
 	color: #330000;
+	margin: 10px 0;
 }
 
 .tribe-events-calendar th {
     background-color: #ff9933;
-    color: #33000;
+    color: #330000;
 }
 
 .tribe-events-schedule h2 {
@@ -565,8 +572,8 @@ span.categories-links {
 	}
 
 	.events {
-		padding: 0 25px 0 15px;
 		margin: 45px auto;
+		padding: 0 25px 0 15px;
 	}
 
 	.events-calendar {
@@ -600,18 +607,17 @@ span.categories-links {
 	}
 
 	li.events {
-		padding: 0 10px 0 0;
 		display: block;
-		padding: 0;
 		margin:  45px auto;
 		max-width: 100%;
+		padding: 0 10px 0 0;
 		width: 40%;
 	}
 
 	.artist-photo {
 		float: none;
-		margin-top: 30px;
 		margin-bottom: 10px;
+		margin-top: 30px;
 	}
 
 	.artist-info {
@@ -629,6 +635,7 @@ span.categories-links {
 		margin-top: 30px;
 		margin-bottom: 10px;
 	}
+	
 }
 
 @media (max-width: 767px) {
@@ -648,33 +655,36 @@ span.categories-links {
 		padding-bottom: 10px;
 	}
 
+	.site-header .search-field {
+		margin: 5px 0;
+	}
+
 	.upcoming-events {
 		margin: 0 auto;
 		width: 100%;
 	}
 
 	li.events {
-		padding: 0 10px 0 0;
 		display: block;
-		padding: 0;
 		margin: auto;
 		max-width: 100%;
+		padding: 0 10px 0 0;
 		width: 40%;
 	}
 
 	.vendor-photo {
 		float: left;
-		padding-top: 0;
 		margin-top: 0;
-}
+		padding-top: 0;
+	}
 
 }
 
 @media (max-width: 643px) {
 
 	.site-content {
-		max-width: 940px;
 		margin: auto;
+		max-width: 940px;
 		padding: 10px 10px 10px 50px;
 	}
 
@@ -684,11 +694,10 @@ span.categories-links {
 	}
 
 	li.events {
-		padding: 0 10px 0 0;
 		display: block;
-		padding: 0;
 		margin: auto;
 		max-width: 100%;
+		padding: 0 10px 0 0;
 		width: 40%;
 	}
 
@@ -698,8 +707,8 @@ span.categories-links {
 @media (max-width: 480px) {
 
 	.site-content {
-		max-width: 940px;
 		margin: auto;
+		max-width: 940px;
 		padding: 10px 10px 10px 30px;
 	}
 
@@ -709,11 +718,10 @@ span.categories-links {
 	}
 
 	li.events {
-		padding: 0 10px 0 0;
 		display: block;
-		padding: 0;
 		margin-left: 20px;
 		max-width: 100%;
+		padding: 0 10px 0 0;
 		width: 40%;
 	}
 
@@ -722,8 +730,8 @@ span.categories-links {
 @media (max-width: 320px) {
 
 	.site-content {
-		max-width: 940px;
 		margin: auto;
+		max-width: 940px;
 		padding: 10px;
 	}
 
@@ -733,12 +741,11 @@ span.categories-links {
 	}
 
 	li.events {
-		padding: 0;
 		display: block;
-		padding: 0;
 		margin-left: 0;
 		max-width: 100%;
 		width: 40%;
+		padding: 0;
 	}
 
 }

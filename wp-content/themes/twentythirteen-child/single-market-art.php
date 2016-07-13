@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying a single Our Vendors custom post type
  *
  * @package WordPress
- * @subpackage TwentyThirteen_Child
- * @since Twenty Thirteen Child 1.0
+ * @subpackage Twenty_Thirteen_Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>

@@ -4,13 +4,13 @@
  *
  * Pulls in several fields from the Advanced Custom Fields plugin
  *
- * The initital appplication/contact form uses the Ninja Form plugin
+ * The appplication/contact form uses the Ninja Form plugin
  *
  * Template Name: Join Us
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen_Child
- * @since Twenty Thirteen_Child 1.0
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>

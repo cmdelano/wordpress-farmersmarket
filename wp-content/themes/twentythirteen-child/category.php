@@ -5,8 +5,8 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Twenty_Thirteen_Child
+ * @since Twenty_Thirteen_Child 1.0
  */
 
 get_header(); ?>
