@@ -683,6 +683,11 @@ span.categories-links {
 		padding-top: 0;
 	}
 
+	.tribe-events-sub-nav li a {
+    	background: #ff9933;
+    	color: #330000;
+    }
+
 }
 
 @media (max-width: 643px) {
