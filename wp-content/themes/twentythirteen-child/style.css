@@ -278,12 +278,16 @@ a.more-link {
 	margin-top: 30px;	
 }
 
-.site-footer .widget  {
+.site-footer .widget a {
 	color: #ffe9a7;
     background: #ff9933;
     float: left;
     margin-right: 20px;
     width: 245px;
+}
+
+.site-footer .widget a {
+    color: #ffe9a7;
 }
 
 .site-footer .sidebar-container {
