@@ -688,6 +688,10 @@ span.categories-links {
     	color: #330000;
     }
 
+    .site-footer .sidebar-container {
+       padding: 10px 30px 100px 10px;
+	}
+
 }
 
 @media (max-width: 643px) {
@@ -738,6 +742,16 @@ span.categories-links {
 }
 
 @media (max-width: 320px) {
+
+	.site-title {
+		font-size: 22px;
+		padding-top: 20px;
+	}
+
+	.site-description {
+		font-size: 12px;
+		padding-bottom: 10px;
+	}
 
 	.site-content {
 		margin: auto;
