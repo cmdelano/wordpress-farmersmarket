@@ -17,11 +17,10 @@ get_header(); ?>
 
 		<div id="content" class="site-content" role="main">
 
-		<h1 class="page-title">The page couldn't be found (404 error)</h1>
+		<h1 class="page-title-404">404 error</h1>
 
 			<div class="page-wrapper">
 				<div class="page-content">
-					<!-- <h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentythirteen' ); ?></h2> -->
 					<p><?php _e( 'We&rsquo;re sorry, but it looks as if nothing was found at this location. Please try a search below.', 'twentythirteen' ); ?></p>
 
 					<?php get_search_form(); ?>

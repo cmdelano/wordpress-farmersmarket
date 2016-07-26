@@ -418,7 +418,7 @@ span.ninja-forms-req-symbol {
     text-align: center;
 }
 
-.page-title h2 {
+.page-title h2 { 
     font-weight: 500;
     font-size: 24px;
     margin: 0 auto;
@@ -446,6 +446,13 @@ h1.page-title {
     font-size: 30px;
 }
 
+/* Styles for the 404 page */
+
+.error404 .page-title-404 {
+	padding: 100px;
+	text-align: center;
+}
+
 
 /* Styles for the category archives page */
 
@@ -470,25 +477,6 @@ h1.page-title {
 
 span.categories-links {
 	color: #ff9933;
-}
-
-/* Styles for the 404 page */
-
-.error404 .page-title {
-	padding: 100px; /* changed from original where 404 genericon removed*/
-}
-
-.error404 .page-title:before {
-	content: ''; /* changed from original genericon */
-	font-size: 0px; /* changed from original size of genericon */
-}
-
-.error404 .page-header,
-.error404 .page-content {
-	margin: 0 auto;
-	max-width: 1040px;
-	padding-bottom: 40px;
-	width: 100%;
 }
 
 /* Styles for the Events Calendar */
@@ -604,7 +592,7 @@ span.categories-links {
 
 	.site-content {
 		margin: auto;
-		padding: 10px 10px 10px 120px;
+		padding: 10px;
 	}
 
 	.upcoming-events {
@@ -640,15 +628,18 @@ span.categories-links {
 		margin-top: 30px;
 		margin-bottom: 10px;
 	}
-	
+
+	.error404 .page-title-404 {
+		padding: ;
+	}
 }
 
 @media (max-width: 767px) {
 
-	.site-content {
+	/*.site-content {
 		margin: auto;
 		padding: 10px 10px 10px 100px;
-	}
+	}*/
 
 	.site-title {
 		font-size: 40px;
@@ -692,15 +683,19 @@ span.categories-links {
        padding: 10px 30px 100px 10px;
 	}
 
+	.error404 .page-title-404 {
+		padding: 40px;
+	}
+
 }
 
 @media (max-width: 643px) {
 
-	.site-content {
+	/*.site-content {
 		margin: auto;
 		max-width: 940px;
 		padding: 10px 10px 10px 50px;
-	}
+	}*/
 
 	.upcoming-events {
 		margin: 0 auto;
@@ -715,16 +710,22 @@ span.categories-links {
 		width: 40%;
 	}
 
+	.error404 .page-title {
+		font-size: 26px; /* this font size was to test what was going on with 404 page */
+		margin: 20px; 
+		padding: 0;
+	}
+	
 }
 
 
 @media (max-width: 480px) {
 
-	.site-content {
+	/*.site-content {
 		margin: auto;
 		max-width: 940px;
 		padding: 10px 10px 10px 30px;
-	}
+	}*/
 
 	.upcoming-events {
 		margin: 0 auto;
@@ -737,6 +738,12 @@ span.categories-links {
 		max-width: 100%;
 		padding: 0 10px 0 0;
 		width: 40%;
+	}
+
+	.error404 .page-title {
+		font-size: 20px;
+		margin: 20px;
+		padding: 0; 
 	}
 
 }
