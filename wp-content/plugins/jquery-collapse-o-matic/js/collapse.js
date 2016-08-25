@@ -1,5 +1,5 @@
 /*!
- * Collapse-O-Matic JavaSctipt v1.6.2
+ * Collapse-O-Matic JavaSctipt v1.6.5
  * http://plugins.twinpictures.de/plugins/collapse-o-matic/
  *
  * Copyright 2016, Twinpictures
@@ -75,9 +75,28 @@ function toggleState (obj, id, maptastic, trig_id) {
 		jQuery('[id^=target][id$='+id+']').removeClass('maptastic');
 	}
 
+	//reset effect and duration to default
+	com_effect = colomatslideEffect;
+	com_duration = colomatduration;
+
+	//effect override
+	if( obj.attr('data-animation_effect') ){
+		com_effect = obj.attr('data-animation_effect');
+	}
+
+	//duration override
+	if( obj.attr('data-duration') ){
+		com_duration = obj.attr('data-duration');
+	}
+
+	//if durration is a number, make it a number
+	if( isFinite(com_duration) ){
+		com_duration = parseFloat(com_duration);
+	}
+
 	//slideToggle
-	if(colomatslideEffect == 'slideToggle'){
-		jQuery('[id^=target][id$='+id+']').slideToggle(colomatduration, function() {
+	if(com_effect == 'slideToggle'){
+		jQuery('[id^=target][id$='+id+']').slideToggle(com_duration, function() {
 			// Animation complete.
 			if( jQuery(this).hasClass('colomat-inline') && jQuery(this).is(':visible') ){
 				jQuery(this).css('display', 'inline');
@@ -88,7 +107,7 @@ function toggleState (obj, id, maptastic, trig_id) {
 				//offset_top = jQuery('#find-'+trig_id).attr('name');
 				offset_top = jQuery('#'+trig_id).attr('data-findme');
 
-				if(!offset_top){
+				if(!offset_top || offset_top == 'auto'){
 					target_offset = jQuery('#'+trig_id).offset();
 					offset_top = target_offset.top;
 				}
@@ -97,11 +116,11 @@ function toggleState (obj, id, maptastic, trig_id) {
 		});
 	}
 	//slideFade
-	else if(colomatslideEffect == 'slideFade'){
+	else if(com_effect == 'slideFade'){
 		jQuery('[id^=target][id$='+id+']').animate({
 			height: "toggle",
 			opacity: "toggle"
-		}, colomatduration, function (){
+		}, com_duration, function (){
 			//Animation complete
 			if( jQuery(this).hasClass('colomat-inline') && jQuery(this).is(':visible') ){
 				jQuery(this).css('display', 'inline');
@@ -111,7 +130,8 @@ function toggleState (obj, id, maptastic, trig_id) {
 			if(trig_id && jQuery('#'+trig_id).is('.find-me.colomat-close')){
 				//offset_top = jQuery('#find-'+trig_id).attr('name');
 				offset_top = jQuery('#'+trig_id).attr('data-findme');
-				if(!offset_top){
+
+				if(!offset_top || offset_top == 'auto'){
 					target_offset = jQuery('#'+trig_id).offset();
 					offset_top = target_offset.top;
 				}
@@ -347,6 +367,12 @@ jQuery(document).ready(function() {
 		if(jQuery(this).hasClass('colomat-expand-only') && jQuery(this).hasClass('colomat-close')){
 			return;
 		}
+
+		//highlander must be one
+		if(jQuery(this).attr('rel') && jQuery(this).attr('rel').indexOf('-highlander') != '-1' && jQuery(this).hasClass('must-be-one') && jQuery(this).hasClass('colomat-close')){
+			return;
+		}
+
 		var id = jQuery(this).attr('id');
 
 		//deal with any scroll to links

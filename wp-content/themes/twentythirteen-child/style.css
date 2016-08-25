@@ -54,6 +54,7 @@ a:visited {
 	font-size: 26px;
 	font-style: normal;
 	font-weight: bold;
+	padding-bottom: 120px;
 	text-align: center;
 	text-shadow: 0.75px 0.75px #330000;
 	text-transform: uppercase;
@@ -549,6 +550,19 @@ span.categories-links {
     z-index: 6;
 }
 
+.tribe-events-sub-nav li a:hover, .tribe-events-sub-nav li a:visited {
+    color: #330000;
+}
+
+.tribe-events-calendar .mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar .mobile-active div[id*=tribe-events-daynum-] a, .tribe-events-calendar .tribe-events-past.tribe-events-has-events:after, .tribe-events-calendar td.mobile-active {
+    background-color: #ff9933;
+    color: #330000;
+}
+
+.tribe-events-calendar .tribe-events-present.mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar .tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a, .tribe-events-calendar td.tribe-events-present.mobile-active {
+    background-color: #ff9933;
+}
+
 /**
 * Media queries 
 **/
@@ -636,11 +650,6 @@ span.categories-links {
 
 @media (max-width: 767px) {
 
-	/*.site-content {
-		margin: auto;
-		padding: 10px 10px 10px 100px;
-	}*/
-
 	.site-title {
 		font-size: 40px;
 		padding-top: 20px;
@@ -679,6 +688,11 @@ span.categories-links {
     	color: #330000;
     }
 
+    .tribe-events-sub-nav li a {
+    	background: #ffe9a7;
+    	color: #330000;
+	}
+
     .site-footer .sidebar-container {
        padding: 10px 30px 100px 10px;
 	}
@@ -690,12 +704,6 @@ span.categories-links {
 }
 
 @media (max-width: 643px) {
-
-	/*.site-content {
-		margin: auto;
-		max-width: 940px;
-		padding: 10px 10px 10px 50px;
-	}*/
 
 	.upcoming-events {
 		margin: 0 auto;
@@ -711,7 +719,7 @@ span.categories-links {
 	}
 
 	.error404 .page-title {
-		font-size: 26px; /* this font size was to test what was going on with 404 page */
+		font-size: 26px;
 		margin: 20px; 
 		padding: 0;
 	}
@@ -721,11 +729,6 @@ span.categories-links {
 
 @media (max-width: 480px) {
 
-	/*.site-content {
-		margin: auto;
-		max-width: 940px;
-		padding: 10px 10px 10px 30px;
-	}*/
 
 	.upcoming-events {
 		margin: 0 auto;
