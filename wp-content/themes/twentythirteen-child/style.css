@@ -1,6 +1,7 @@
 /*
 Theme Name: Child of Twenty Thirteen
 Author: Cindy DeLano
+Authos URI: http://www.cindydelano.com/
 Description: This is a theme for a faux fall farmers market site
 Version: 1.0
 Template: twentythirteen
@@ -276,7 +277,25 @@ a.more-link {
 /* Footer styles  */
 
 .site-footer {
+	background: #ff9933;
+	color: #330000;
 	margin-top: 30px;	
+	text-align: left;
+}
+
+.designed-by {
+	padding-bottom: 20px;
+	background-color: #ff9933;
+}
+
+.designed-by p {
+	margin: 0;
+	text-align: center;
+}
+
+.designed-by a {
+	text-decoration: underline;
+	color: #330000;
 }
 
 .site-footer .widget {
@@ -289,6 +308,7 @@ a.more-link {
 
 .site-footer .widget a {
     color: #ffe9a7;
+    text-align: left;
 }
 
 .site-footer .sidebar-container {
@@ -324,6 +344,13 @@ a.more-link {
 	font-size: 16px;
 	font-weight: 400;
 }
+
+.designed-by {
+	
+
+}
+
+
 
 /* Style for the Join Us Page */
 
